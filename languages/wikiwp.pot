@@ -1,0 +1,139 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator:"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#. Located in comments
+msgid "% responses"
+msgstr ""
+
+#. Located in header for logged in users next to main search form
+msgid "Add post"
+msgstr ""
+
+#. Located in postinfo for posts and search results
+msgid "Author"
+msgstr ""
+
+#. Located in postinfo for search results and footer
+msgid "By"
+msgstr ""
+
+#. Located in postinfo for posts and search results
+msgid "Categories"
+msgstr ""
+
+#. Located in postinfo for posts and search results
+msgid "Comment"
+msgstr ""
+
+#. Located in postinfo for posts and search results
+msgid "Comments"
+msgstr ""
+
+#. Located in postinfo for posts, pages and search results
+msgid "edit"
+msgstr ""
+
+#. Located beneath single post
+msgid "Last posts"
+msgstr ""
+
+#. Located in post meta for wiki posts or pages
+msgid "Last update on"
+msgstr ""
+
+#. Located in dashboard > Appearance > Customize for choosing your own logo file
+msgid "Logo"
+msgstr ""
+
+#. Located in home
+msgid "Newer Entries"
+msgstr ""
+
+#. Located in comments
+msgid "no responses"
+msgstr ""
+
+#. located in home
+msgid "Older Entries"
+msgstr ""
+
+#. Located in search results
+msgid "on"
+msgstr "am"
+
+#. Located in comments
+msgid "one response"
+msgstr ""
+
+#. Located in post info beneath single post
+msgid "Other posts"
+msgstr ""
+
+#. Located in authors page
+msgid "Our authors"
+msgstr ""
+
+#. Located in 404 error template
+msgid "Page not found"
+msgstr ""
+
+#. Located in post meta for wiki posts or pages
+msgid "Published"
+msgstr ""
+
+#. Located in post excerpt
+msgid "read more"
+msgstr ""
+
+#. Located in post meta for wiki posts or pages and post info beneath single posts
+msgid "Related posts"
+msgstr ""
+
+#. Located in dashboard > Appearance > Customize for choosing your own logo file
+msgid "Use your own Logo instead of the blog name."
+msgstr ""
+
+#. Located in search page title
+msgid "results found for %s"
+msgstr ""
+
+#. Located in dashboard > Appearance > Customize for choosing your own logo file
+msgid "Set your own logo"
+msgstr ""
+
+#. Located in > header > main search field
+msgid "Search"
+msgstr ""
+
+#. Located in post and page pagination
+msgid "Sections"
+msgstr ""
+
+#. Located in dashboard > Appearance > Customize for choosing your own logo file
+msgid "Set your own logo"
+msgstr ""
+
+#. Located in single posts over comments form if no comments where left so far
+msgid "So empty here ... leave a comment!"
+msgstr ""
+
+#. Located in postinfo for posts and search results
+msgid "Tags"
+msgstr ""
+
+#. Located in comments
+msgid "This post currently has"
+msgstr ""
+
+#. Located in front page title
+msgid "Welcome to"
+msgstr ""
