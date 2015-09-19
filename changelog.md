@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.8
+## 1.8 (WIP)
 
 ### Bug fixes
 
@@ -22,13 +22,18 @@
 
 ## 1.7
 
-+ Bug fix: Headings in widgets have a negative indentation left and are cut off 
-+ Bug fix: Renamed "Primary Menu" with "Primary" and "Meta Menu" with "Meta" to avoid confusion 
-+ Bug fix: Removed extra decelerated font family for navigation
-+ Bug fix: The footer has not the same width of the content
-+ Bug fix: The footer sidebar columns are not set so widgets will float not the way they should
-+ Bug fix: Footer search form widget optimized
-+ Bug fix: Some HTML semantic issues
+### Bug fixes
+
++ Headings in widgets have a negative indentation left and are cut off
++ Renamed "Primary Menu" with "Primary" and "Meta Menu" with "Meta" to avoid confusion
++ Removed extra decelerated font family for navigation
++ The footer has not the same width of the content
++ The footer sidebar columns are not set so widgets will float not the way they should
++ Footer search form widget optimized
++ Some HTML semantic issues
+
+### Improvements
+
 + Removed headline indent and underline h2 for better readability 
 + Ordered news and category excerpt by last modified
 + Removed post pagination for category "Wiki"
