@@ -7,7 +7,6 @@
                 echo '<a class="postmeta-thumbnail" href="' . $medium_fix_width_image_url[0] . '" title="' . the_title_attribute('echo=0') . '" >hallo</a>';
             } else {
                 $thumbnail_large_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
-                //echo '<a class="postmeta-thumbnail" href="" title="' . the_title_attribute('echo=0') . '" >' . the_post_thumbnail('large') . '</a>';
                 echo '<a class="postmeta-thumbnail" href="' . $thumbnail_large_url[0] . '" title="' . the_title_attribute('echo=0') . '" >' . get_the_post_thumbnail($post_id, 'large') . '</a>';
             }
         endwhile;
