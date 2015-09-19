@@ -23,3 +23,11 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 
 The images used for this software are based on the [TYPO3 Backend Icons](https://github.com/wmdbsystems/T3.Icons) which
 are licensed under [MIT](https://github.com/wmdbsystems/T3.Icons/blob/master/LICENSE).
+
+### WikiWP Logo
+
+The logo of WikiWP (images/wikiwp-brand-logo.png) can be used, copied and published to the following conditions:
+
+USING THE LOGO OF WIKIWP WITHOUT MODIFYING IT IS PERMITTED FOR LINKING TO THE SOFTWARE (WEBSITE, WORDPRESS.ORG, SOCIAL
+MEDIA, GITHUB) AND ITS COMPONENTS. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS WITHOUT CONSENT IN CONNECTION WITH
+THE MEDIUM BE, FROM WHICH THE LINK IS PLACED.
