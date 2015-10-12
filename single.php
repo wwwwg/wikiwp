@@ -2,27 +2,34 @@
 	get_header();
 	get_template_part('navigation');
 
-	// Post
+	// post
 	while ( have_posts() ) : the_post();
-	// Content
-	echo '<div class="content post-content">';
-	echo '<h1 class="post-title">';
-		 the_title();
-	echo '</h1>';
-	the_content();
-	get_template_part('postinfo' );
-	// Comments
-	comments_template();
-	endwhile;
-    get_sidebar();
-	// Last posts
-	echo '<div class="last-posts-list postinfo">',
-		 '<h4>'.__('Last posts', 'wikiwp').'</h4>',
-		 '<ul>';
-	wp_get_archives('type=postbypost&limit=10');
-	echo '</ul>',
-		 '</div>', // End of .lastlist
-		 '<div class="clearfix">&nbsp;</div>',
-		 '</div>'; // End of .content
-    // Footer
-    get_footer();
+?>
+
+<div class="post-container">
+	<?php
+		// get content format
+		get_template_part( 'content', get_post_format() );
+
+
+		// comments
+		comments_template();
+		endwhile;
+
+		// sidebar
+		get_sidebar();
+	?>
+
+	<div class="last-posts-list postinfo class="clearfix"">
+		<hr>
+		<h4 class="lastPostsListTitle">
+			<?php echo __('Last posts', 'wikiwp'); ?>
+		</h4>
+
+		<ul>
+			<?php wp_get_archives('type=postbypost&limit=10'); ?>
+		</ul>
+	</div>
+</div>
+
+<?php get_footer(); ?>

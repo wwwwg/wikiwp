@@ -34,10 +34,10 @@ Text Domain: wikiwp
     .bypostauthor {}
 
 
-    /* FONTS */
+    /* fonts */
     .cat-title,
     .page-title,
-    .post-title { margin-top: 0; }
+    .entryTitle { margin-top: 0; }
 
     a:focus,
     a:active,
@@ -337,17 +337,33 @@ Text Domain: wikiwp
     
 
     /* Content */
-    .content { padding: 30px; }
-    
     article { margin: 0; }
 
-    .cat-content,
-    .page-content,
-    .portfolio-content,
-    .post-content {
+    .cat-container,
+    .page-container,
+    .post-container {
+        border-right: 1px solid #E5E5E5;
+        border-bottom: 1px solid #E5E5E5;
+        border-left: 1px solid #E5E5E5;
+        padding: 30px;
         width: auto;
         -moz-hyphens: auto;
         hyphens: auto;
+        background-color: white;
+    }
+
+
+
+    /* Content */
+    .content {
+
+
+    }
+
+    .content h2 {
+        overflow: hidden;
+        border-bottom: 1px solid #E5E5E5;
+        line-height: 1.4em;
     }
     
 
@@ -909,7 +925,7 @@ Text Domain: wikiwp
     
     /* Content */
     .content { margin-top: 0; }
-    
+
     .container-fluid { margin-right: 300px; }
     /* Footer */
     footer .content {
@@ -1143,4 +1159,11 @@ aside {
     height: 16px;
     width: 16px;
     background: url("images/pen.svg") no-repeat;
+}
+
+
+/* entry */
+.entryHeader {
+    margin: 0;
+    padding: 0;
 }
