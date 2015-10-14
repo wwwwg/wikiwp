@@ -1,4 +1,4 @@
-<article class="entryTypePost">
+<article class="entry entryTypePost">
     <header class="entryHeader">
         <h1 class="entryTitle">
             <?php the_title(); ?>

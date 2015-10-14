@@ -15,12 +15,9 @@
 		// comments
 		comments_template();
 		endwhile;
-
-		// sidebar
-		get_sidebar();
 	?>
 
-	<div class="last-posts-list postinfo class="clearfix"">
+	<div class="last-posts-list postinfo clearfix">
 		<hr>
 		<h4 class="lastPostsListTitle">
 			<?php echo __('Last posts', 'wikiwp'); ?>
@@ -32,4 +29,10 @@
 	</div>
 </div>
 
-<?php get_footer(); ?>
+<?php
+	// sidebar
+	get_sidebar();
+
+	// footer
+	get_footer();
+?>

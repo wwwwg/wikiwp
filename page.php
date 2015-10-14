@@ -5,7 +5,7 @@
 	// Post
 	while ( have_posts() ) : the_post();
     // Content
-	echo '<div class="content"';
+	echo '<div class="page-container"';
 	post_class('post');
 	echo '>',
 		 '<h1 class="page-title">';

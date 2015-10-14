@@ -63,7 +63,7 @@
              '</header>',
              
     // Container
-         '<div class="container-fluid page-container">';
+         '<div class="container-fluid">';
 
 // WordPress core custom header image
     $header_image = get_header_image();

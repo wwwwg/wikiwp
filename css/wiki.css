@@ -1,3 +1,6 @@
+@import url("fonts.css");
+@import url("media.css");
+
 @media only screen {
     html, body {
         font-family: sans-serif;
@@ -167,19 +170,7 @@
     }
 
 
-    /* Content */
-    .content {
-        border-right: 1px solid #E5E5E5;
-        border-bottom: 1px solid #E5E5E5;
-        border-left: 1px solid #E5E5E5;
-        background-color: white;
-    }
 
-    .content h2 {
-        overflow: hidden;
-        border-bottom: 1px solid #E5E5E5;
-        line-height: 1.4em;
-    }
 
 
     /* Category */
@@ -193,7 +184,7 @@
     }
 
     /* Excerpt */
-    .excerpt-title {
+    .entryTypePostExcerpt .entryTitle {
         margin-top: 0;
         margin-bottom: 0;
         font-size: 1.3em;

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+
+figure {
+    display: inline-block;
+}
+
+
+/* thumbnail */
+.entryThumbnail {
+    display: inline-block;
+}

@@ -294,3 +294,82 @@
 	return '... <a href="'. get_permalink($post->ID) . '">' . __('read more', 'wikiwp').' &raquo;</a>';
 	}
 	add_filter('excerpt_more', 'wikiwp_excerpt_more');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+     * Thumbnail output handling
+     *
+     * @return string Formatted output in HTML
+     */
+    function wikiwp_get_thumbnail($post) {
+        if ( has_post_thumbnail() ) {
+            // home and category
+            if (is_category() || is_home() || is_front_page()) { ?>
+                <div class="entryThumbnail alignleft">
+                    <a class="thumbnailPostLink" href="<?php esc_url(the_permalink()); ?>">
+                        <figure class="thumbnailPost">
+                            <?php the_post_thumbnail('mini'); ?>
+                        </figure>
+                    </a>
+                </div>
+            <?php }
+
+            // static page
+            elseif (is_page()) {
+                // wiki page
+                if (is_page_template('wiki-page.php')) {
+                    //
+                }
+
+                // default
+                else {
+                    //
+                }
+            }
+
+            // single post
+            elseif (is_single()) {
+                // wiki category
+                if (in_category('wiki')) {
+                    //
+                }
+
+                // default
+                else {
+                   //
+                }
+            }
+
+            // search result page
+            elseif (is_search()) {
+               //
+            }
+        }
+    }

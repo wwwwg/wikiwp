@@ -2,8 +2,8 @@
     get_header();
     get_template_part('navigation');
 
-    echo '<div class="content">',
-         '<div class="cat-content">',
+    echo
+         '<div class="cat-container">',
     // Category name
          '<h1 class="cat-title">';
     if ( is_front_page() && is_home() ) {
@@ -50,7 +50,7 @@
     get_template_part('postinfo');
     echo '</div>'; // End of .excerpt
     endwhile;
-echo '</div>'; // End of .cat-content
+echo '</div>'; // End of .cat-container
     // Pargination
     echo '<div class="posts-pagination">'; 
     previous_posts_link('<span class="next-posts-link">&laquo; '.__('Newer Entries', 'wikiwp').'</span>');
@@ -60,7 +60,6 @@ echo '</div>'; // End of .cat-content
     // If no posts were found
     endif;
     echo '</div>', // End of .content
-         '</div>'; // End of 
     // Sidebar
     get_sidebar();
     // Footer

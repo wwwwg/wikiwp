@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*
 Theme Name: WikiWP
 Theme URI: http://wikiwp.com
@@ -339,7 +341,7 @@ Text Domain: wikiwp
     /* Content */
     article { margin: 0; }
 
-    .cat-container,
+    .catContainer,
     .page-container,
     .post-container {
         border-right: 1px solid #E5E5E5;

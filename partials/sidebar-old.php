@@ -274,3 +274,118 @@ while ( have_posts() ) : the_post();
 
     echo '<div class="custom-sidebar">'; // end of custom sidebar
 endwhile;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="custom-sidebar">
+    <?php
+        while (have_posts()) : the_post();
+            get_linked_thumbnail($post->ID, 'medium-fix-width', true);
+            get_sidebar_edit_link($post->ID, true);
+        endwhile;
+    ?>
+</div>
+
+
+
+
+<?php
+// functions.php
+
+
+
+
+/**
+ * @param int    $postID
+ * @param string $size
+ * @param bool   $echo
+ */
+function get_linked_thumbnail($postID, $size, $echo = false) {
+    $thumbnail = '';
+    if (has_post_thumbnail($postID)) {
+        $medium_fix_width_image_url = wp_get_attachment_image_src(get_post_thumbnail_id($postID), $size);
+        $thumbnail = '<a class="postmeta-thumbnail" href="' . $medium_fix_width_image_url[0] . '" title="' . the_title_attribute(array('echo' => false, 'post' => $postID)) . '" ><img src="' . $medium_fix_width_image_url[0] . '" alt="I am awesome!!!" /></a>';
+    }
+    (bool)$echo ? echo $thumbnail : return $thumbnail;
+}
+
+/**
+ * @param int  $postID
+ * @param bool $echo
+ */
+function get_sidebar_edit_link($postID, $echo = false) {
+    if(is_user_logged_in()) {
+        $src = get_edit_post_link($postID);
+        (bool)$echo ? echo $src : return $src;
+    }
+}
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

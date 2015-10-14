@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+article.entry h2 {
+    overflow: hidden;
+    border-bottom: 1px solid #E5E5E5;
+    line-height: 1.4em;
+}
