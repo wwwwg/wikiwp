@@ -61,12 +61,3 @@ get_sidebar();
 // footer
 get_footer();
 ?>
-
-
-
-
-
-
-
-
-
