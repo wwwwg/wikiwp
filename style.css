@@ -194,7 +194,7 @@ Text Domain: wikiwp
 
 
     /* Header */
-    header {
+    .headerMain {
         display: block;
         position: fixed;
         z-index: 1000;
@@ -211,7 +211,7 @@ Text Domain: wikiwp
         height: 100px;
     }
     
-    .admin-bar header { top: 46px; }
+    .admin-bar .headerMain { top: 46px; }
 
     #logo {
         margin-left: 5em;
@@ -836,24 +836,24 @@ Text Domain: wikiwp
     input { width: 60%; }
     
     /* Header */    
-    header.container-menu-side-open {
+    .headerMain.container-menu-side-open {
         width: 100%;
         margin-left: 0;
         padding-right: 15px;
     }
-    
-    header.container-menu-side-open .header-content {
+
+    .headerMain.container-menu-side-open .header-content {
         width: auto;
         margin-left: 200px;
     }
-    
-    header.container-aside-open {
+
+    .headerMain.container-aside-open {
         width: 100%;
         margin-right: 0;
         padding-right: 315px;
     }
-    
-    header.container-aside-open .header-content {
+
+    .headerMain.container-aside-open .header-content {
         width: inherit;
         margin-right: 300px;
     }
@@ -888,9 +888,9 @@ Text Domain: wikiwp
 
 @media only screen and (min-width:783px) {    
     /* Header */
-    header { width: 100%; }
+    .headerMain { width: 100%; }
     
-    .admin-bar header { top: 32px; }
+    .admin-bar .headerMain { top: 32px; }
     
 
     /* Sidebar */
@@ -904,7 +904,7 @@ Text Domain: wikiwp
     
     
     /* Header */
-    header {
+    .headerMain {
         position: static;
         z-index: inherit;
         padding-right: 315px;

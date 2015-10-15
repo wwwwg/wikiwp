@@ -31,7 +31,7 @@
     
 
     // Header
-         '<header>',
+         '<header class="headerMain">',
 
 
 
