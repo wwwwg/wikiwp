@@ -333,7 +333,7 @@
             // home and category
             if (is_category() || is_home() || is_front_page()) { ?>
                 <div class="entryThumbnail alignleft">
-                    <a class="thumbnailPostLink" href="<?php esc_url(the_permalink()); ?>">
+                    <a class="thumbnailLink thumbnailPostLink" href="<?php esc_url(the_permalink()); ?>">
                         <figure class="thumbnailPost">
                             <?php the_post_thumbnail('mini'); ?>
                         </figure>

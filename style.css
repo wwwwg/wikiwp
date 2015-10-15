@@ -1169,3 +1169,12 @@ aside {
     margin: 0;
     padding: 0;
 }
+
+
+.entryTypePostExcerpt {
+    margin-bottom: 30px;
+}
+
+.entryTypePostExcerpt:last-child {
+    margin-bottom: 0;
+}
