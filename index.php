@@ -1,66 +1,82 @@
 <?php
-    get_header();
-    get_template_part('navigation');
+get_header();
+get_template_part('navigation');
+?>
 
-    echo
-         '<div class="cat-container">',
-    // Category name
-         '<h1 class="cat-title">';
-    if ( is_front_page() && is_home() ) {
-         _e('Welcome to', 'wikiwp');
-        echo '&nbsp;'.get_bloginfo('name');
-    } else {
-        wp_title('');
-    }
-    echo '</h1>';
-    // Blog description
-    if ( is_front_page() && is_home() && get_bloginfo( 'description' ) ) {
+<div class="catContainer">
+    <section class="entryTypePostExcerptHeader">
+        <header class="entryHeader">
+            <h1 class="entryTitle">
+                <?php
+                if ( is_front_page() && is_home() ) {
+                    _e('Welcome to', 'wikiwp');
+                    echo '&nbsp;'.get_bloginfo('name');
+                } else {
+                    wp_title('');
+                }
+                ?>
+            </h1>
+
+            <?php
+            // Blog description
+            if ( is_front_page() && is_home() && get_bloginfo( 'description' ) ) {
             echo '<p><small class="cat-title-description">'.get_bloginfo('description').'</small><p>';
-        }
-    // Post excerpt
-    if ( have_posts() ) : while (have_posts()) : the_post();
-    echo '<div class="excerpt clearfix">';
-         
-    // Thumbnail
-    if ( has_post_thumbnail() ) {
-    echo '<a class="excerpt-thumbnail" href="';
-    the_permalink();
-    echo '" title="';
-    the_title_attribute();
-    echo '">';
-    the_post_thumbnail('mini');
-    echo '</a>';
-    // Post title
-        echo '<h2 class="excerpt-title"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h2>',
-        // Post info
-             '<div class="postinfo postinfo-excerpt">',
-			 '<span>'.get_the_date().'</span>',
-		   	 '</div>'; // End of .postinfo-excerpt
-    } else {
-        // Post title
-        echo '<h2 class="excerpt-title"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h2>',
-        // Post info
-             '<div class="postinfo postinfo-excerpt">',
-			 '<span>'.get_the_date().'</span>',
-		   	 '</div>'; // End of .postinfo-excerpt
-    }
-    // Excerpt
-    the_excerpt();
-    // Post info
-    get_template_part('postinfo');
-    echo '</div>'; // End of .excerpt
-    endwhile;
-echo '</div>'; // End of .cat-container
-    // Pargination
-    echo '<div class="posts-pagination">'; 
+                }
+            ?>
+        </header>
+
+        <div class="entryContent">
+            <?php
+            // category description if exists
+            $category = get_the_category();
+            if( category_description( $category[0]->cat_ID ) ) {
+                echo '<p class="categoryDescription">'.category_description( $category[0]->cat_ID ).'</p>';
+            }
+            ?>
+        </div>
+    </section>
+
+    <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+
+        <article class="entry entryTypePostExcerpt">
+
+            <?php wikiwp_get_thumbnail($post); ?>
+
+            <div class="entryContainer">
+                <header class="entryHeader">
+                    <h2 class="entryTitle">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_title(); ?>
+                        </a>
+                    </h2>
+                </header>
+
+                <div class="entryContent">
+                    <?php the_excerpt(); ?>
+                </div>
+
+                <footer class="entryMeta">
+                    <?php get_template_part('postinfo' ); ?>
+                </footer>
+            </div>
+        </article>
+
+    <?php endwhile;
+
+    // Pagination
+    echo '<div class="posts-pagination">';
     previous_posts_link('<span class="next-posts-link">&laquo; '.__('Newer Entries', 'wikiwp').'</span>');
-    next_posts_link('<span class="previous-posts-link">'.__('Older Entries', 'wikiwp').' &raquo;</span>');  
-    else : 
-    echo '</div>'; // End of .posts-pargination
+    next_posts_link('<span class="previous-posts-link">'.__('Older Entries', 'wikiwp').' &raquo;</span>');
+    else :
+    echo '</div>'; // End of .posts-pagination
     // If no posts were found
-    endif;
-    echo '</div>', // End of .content
-    // Sidebar
-    get_sidebar();
-    // Footer
-    get_footer();
+
+    endif; ?>
+</div>
+
+<?php
+// sidebar
+get_sidebar();
+
+// footer
+get_footer();

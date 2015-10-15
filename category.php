@@ -47,11 +47,17 @@
         </div>
     </article>
 
+    <?php endwhile;
 
-    <?php endwhile; ?>
+    // Pagination
+    echo '<div class="posts-pagination">';
+    previous_posts_link('<span class="next-posts-link">&laquo; '.__('Newer Entries', 'wikiwp').'</span>');
+    next_posts_link('<span class="previous-posts-link">'.__('Older Entries', 'wikiwp').' &raquo;</span>');
+    else :
+    echo '</div>'; // End of .posts-pagination
+    // If no posts were found
 
-
-    <?php endif; ?>
+    endif; ?>
 </div>
 
 <?php
