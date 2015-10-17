@@ -55,11 +55,11 @@
         text-align: justify;
     }
 
-    a { color: #0645ad; }
+    a { color: #2487D7; }
 
     a:link { text-decoration: none; }
 
-    a:visited { color: #0b0080; }
+    a:visited { color: #135995; }
 
     input {
         border-color: #E5E5E5;
@@ -71,6 +71,13 @@
         -ms-transition: border 0.3s;
         -o-transition: border 0.3s;
         transition: border 0.3s;
+    }
+
+    input[type="file"] {
+        border: none;
+        padding: 0;
+        width: auto;
+        background: transparent;
     }
 
     textarea {
@@ -97,10 +104,10 @@
 
     input[type="submit"] {
         margin: 0.5em 0 0 0;
-        border: 1px solid #cccccc;
+        border: 1px solid #2487D7;
         padding: 0.6em 2em;
         width: auto;
-        color: #333333;
+        color: #2487D7;
         background-color: white;
         -webkit-transition: background-color 0.3s;
         -moz-transition: background-color 0.3s;
@@ -112,8 +119,9 @@
     input[type="submit"]:hover,
     input[type="submit"]:active {
         cursor: pointer;
-        border-color: #4198E5;
-        background-color: #D5E0E5;
+        color: white;
+        border-color: #135995;
+        background-color: #2487D7;
         -webkit-transition: border 0.3s, color 0.3s, background-color 0.3s;
         -moz-transition: border 0.3s, color 0.3s, background-color 0.3s;
         -ms-transition: border 0.3s, color 0.3s, background-color 0.3s;
