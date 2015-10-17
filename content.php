@@ -7,17 +7,15 @@
 
     <div class="entryContent">
         <?php
-            the_content();
-
-            //bornholm_the_content();
+        // get the content
+        the_content();
         ?>
     </div>
 
     <footer class="entryMeta">
         <?php
-            get_template_part('postinfo' );
-
-            //bornholm_footer_meta();
+        // get the post info
+        get_template_part('postinfo' );
         ?>
     </footer>
 </article>

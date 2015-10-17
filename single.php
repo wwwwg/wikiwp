@@ -1,20 +1,20 @@
 <?php
-	get_header();
-	get_template_part('navigation');
+get_header();
+get_template_part('navigation');
 
-	// post
-	while ( have_posts() ) : the_post();
+// post
+while ( have_posts() ) : the_post();
 ?>
 
 <div class="post-container">
 	<?php
-		// get content format
-		get_template_part( 'content', get_post_format() );
+	// get content format
+	get_template_part( 'content', get_post_format() );
 
 
-		// comments
-		comments_template();
-		endwhile;
+	// comments
+	comments_template();
+	endwhile;
 	?>
 
 	<div class="last-posts-list postinfo clearfix">
@@ -30,9 +30,8 @@
 </div>
 
 <?php
-	// sidebar
-	get_sidebar();
+// sidebar
+get_sidebar();
 
-	// footer
-	get_footer();
-?>
+// footer
+get_footer();
