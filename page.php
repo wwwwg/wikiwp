@@ -1,23 +1,25 @@
 <?php
-	get_header();
-	get_template_part('navigation');
+get_header();
+get_template_part('navigation');
 
-	// Post
-	while ( have_posts() ) : the_post();
-    // Content
-	echo '<div class="page-container"';
-	post_class('post');
-	echo '>',
-		 '<h1 class="page-title">';
-	the_title();
-	echo '</h1>';
-	the_content();
-	get_template_part('postinfo' );
-	// Comments
+// post
+while ( have_posts() ) : the_post();
+?>
+
+<div class="pageContainer">
+	<?php
+	// get content format
+	get_template_part( 'content', get_post_format() );
+
+	// comments
 	comments_template();
 	endwhile;
-	echo '</div>'; // End of .content
-    // Sidebar
-    get_sidebar();
-    // Footer
-    get_footer();
+	?>
+</div>
+
+<?php
+// sidebar
+get_sidebar();
+
+// footer
+get_footer();
