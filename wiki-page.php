@@ -15,7 +15,7 @@ get_template_part('navigation');
 while ( have_posts() ) : the_post();
 ?>
 
-<div class="pageContainer">
+<div class="pageContainer pageContainerWiki">
     <?php
     // get content format
     get_template_part( 'content', get_post_format() );
