@@ -1,31 +1,46 @@
 <?php
 /**
-*Template Name: Wiki
-*
-* @package WordPress
-* @subpackage WikiWP
-* @since WikiWP 1.8
-*/
+ *Template Name: Wiki
+ *
+ * @package WordPress
+ * @subpackage WikiWP
+ * @since WikiWP 1.8
+ */
+
 
 get_header();
 get_template_part('navigation');
 
-// postmeta
-get_template_part('postmeta' );
-// POST
+// post
 while ( have_posts() ) : the_post();
-echo '<div class="content"';
-post_class('post');
-echo '>',
-	 '<h1 class="page-title">';
-the_title();
-echo '</h1>';
-the_content();
-get_template_part('postinfo' );
+?>
+
+<div class="pageContainer">
+    <?php
+    // get content format
+    get_template_part( 'content', get_post_format() );
+
+
+    // comments
+    comments_template();
+    endwhile;
+    ?>
+
+    <div class="last-posts-list postinfo clearfix">
+        <hr>
+        <h4 class="lastPostsListTitle">
+            <?php echo __('Last posts', 'wikiwp'); ?>
+        </h4>
+
+        <ul>
+            <?php wp_get_archives('type=postbypost&limit=10'); ?>
+        </ul>
+    </div>
+</div>
+
+<?php
+// sidebar
 get_sidebar();
-// comments
-comments_template();
-endwhile;
-echo '</div>'; // end of .content
+
 // footer
 get_footer();

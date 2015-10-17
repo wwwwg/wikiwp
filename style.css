@@ -342,8 +342,8 @@ Text Domain: wikiwp
     article { margin: 0; }
 
     .catContainer,
-    .page-container,
-    .post-container {
+    .pageContainer,
+    .postContainer {
         border-right: 1px solid #E5E5E5;
         border-bottom: 1px solid #E5E5E5;
         border-left: 1px solid #E5E5E5;

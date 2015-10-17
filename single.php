@@ -6,7 +6,7 @@ get_template_part('navigation');
 while ( have_posts() ) : the_post();
 ?>
 
-<div class="post-container">
+<div class="postContainer">
 	<?php
 	// get content format
 	get_template_part( 'content', get_post_format() );
