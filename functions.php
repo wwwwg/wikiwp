@@ -296,37 +296,10 @@
 	add_filter('excerpt_more', 'wikiwp_excerpt_more');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /**
      * Thumbnail output handling
      *
-     * @return string Formatted output in HTML
+     * @return string formatted output in HTML
      */
     function wikiwp_get_thumbnail($post) {
         if ( has_post_thumbnail() ) {
@@ -341,35 +314,16 @@
                 </div>
             <?php }
 
-            // static page
-            elseif (is_page()) {
-                // wiki page
-                if (is_page_template('wiki-page.php')) {
-                    //
+            // single post and page
+            elseif ( is_single() ) {
+                // FEATURED IMAGE MEDIUM FIX WIDTH
+                if (has_post_thumbnail('medium-fix-width')) {
+                    $medium_fix_width_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'medium-fix-width');
+                    echo '<a class="postmeta-thumbnail" href="' . $medium_fix_width_image_url[0] . '" title="' . the_title_attribute('echo=0') . '" >hallo</a>';
+                } else {
+                    $thumbnail_large_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
+                    echo '<a class="postmeta-thumbnail" href="' . $thumbnail_large_url[0] . '" title="' . the_title_attribute('echo=0') . '" >' . get_the_post_thumbnail($post_id, 'large') . '</a>';
                 }
-
-                // default
-                else {
-                    //
-                }
-            }
-
-            // single post
-            elseif (is_single()) {
-                // wiki category
-                if (in_category('wiki')) {
-                    //
-                }
-
-                // default
-                else {
-                   //
-                }
-            }
-
-            // search result page
-            elseif (is_search()) {
-               //
             }
         }
     }
