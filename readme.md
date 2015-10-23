@@ -25,7 +25,7 @@ see license.md
 + Footer search form widget optimized
 + Some HTML semantic issues
 
-### Improvements
+### Enhancement
 
 + Removed headline indent and underline h2 for better readability
 + Ordered news and category excerpt by last modified

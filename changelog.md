@@ -6,7 +6,7 @@
 
 + All search results are shown as post meta in sidebar
 
-### Improvements
+### Enhancement
 
 + Ported readme.txt to Markdown
 + Ported license.txt to Markdown and moved license text from readme.md to this file
@@ -32,7 +32,7 @@
 + Footer search form widget optimized
 + Some HTML semantic issues
 
-### Improvements
+### Enhancement
 
 + Removed headline indent and underline h2 for better readability 
 + Ordered news and category excerpt by last modified
