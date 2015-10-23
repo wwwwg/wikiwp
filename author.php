@@ -26,7 +26,7 @@
          '<ul>'; 
     if ( have_posts() ) : while ( have_posts() ) : the_post();
     echo '<li>',
-         '<a href="'.get_the_permalink().'" rel="bookmark" title="'.get_the_title().'">'.get_the_title().'</a>',
+         '<a href="'.get_permalink().'" rel="bookmark" title="'.get_the_title().'">'.get_the_title().'</a>',
          '</li>';
          endwhile;
     echo '</ul>';

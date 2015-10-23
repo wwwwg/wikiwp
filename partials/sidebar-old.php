@@ -197,7 +197,7 @@ elseif (in_category('wiki')) {
                 $my_query = new WP_Query($args);
                 if( $my_query->have_posts() ) {
                     while ($my_query->have_posts()) : $my_query->the_post();
-                        echo '<li><a href="'.get_the_permalink().'" rel="bookmark" title="';
+                        echo '<li><a href="'.get_permalink().'" rel="bookmark" title="';
                         the_title_attribute();
                         echo '"><div class="related-post-thumb">'.get_the_post_thumbnail($post->ID, 'mini').'</div>',
                             '<span>'.get_the_title().'</span>',
@@ -211,7 +211,7 @@ elseif (in_category('wiki')) {
             $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
             if( $related ) foreach( $related as $post ) {
                 setup_postdata($post);
-                echo '<li><a href="'.get_the_permalink().'" rel="bookmark" title="';
+                echo '<li><a href="'.get_permalink().'" rel="bookmark" title="';
                 the_title_attribute();
                 echo '"><div class="related-post-thumb">'.get_the_post_thumbnail($page->ID, 'mini').'</div>',
                     '<span>'.get_the_title().'</span>',

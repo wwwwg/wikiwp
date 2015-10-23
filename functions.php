@@ -83,7 +83,7 @@
                     echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID));
                 }
             echo '" />'."\n",
-                 '<meta property="og:url" content="'.get_the_permalink().'" />'."\n",
+                 '<meta property="og:url" content="'.get_permalink().'" />'."\n",
                  '<meta property="og:description" content="'.$description.'" />'."\n",
                  '<meta property="og:site_name" content="'.get_bloginfo('name').'" />'."\n";
         }

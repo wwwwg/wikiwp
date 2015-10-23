@@ -23,14 +23,14 @@
     the_post_thumbnail('mini');
     echo '</a>';
     // Post title
-        echo '<h2 class="excerpt-title"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h2>',
+        echo '<h2 class="excerpt-title"><a href="'.get_permalink().'">'.get_the_title().'</a></h2>',
         // Post info
              '<div class="postinfo postinfo-excerpt">',
 			 '<span>'.get_the_date().'</span>',
 		   	 '</div>'; // End of .postinfo-excerpt
     } else {
         // Post title
-        echo '<h2 class="excerpt-title"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h2>',
+        echo '<h2 class="excerpt-title"><a href="'.get_permalink().'">'.get_the_title().'</a></h2>',
         // Post info
              '<div class="postinfo postinfo-excerpt">',
 			 '<span>'.get_the_date().'</span>',
