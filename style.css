@@ -1191,17 +1191,23 @@ aside {
 }
 
 
-/* sticky post on excerpt */
-.entryTypePostExcerpt .sticky {
+/*
+ * sticky post on excerpt
+ * plugin support for Category Sticky Post
+*/
+.entryTypePostExcerpt .sticky,
+.entryTypePostExcerpt .category-sticky {
     padding: 15px;
     background-color: #F9F9F9;
     border: 1px solid #E5E5E5;
 }
 
-.entryTypePostExcerpt .sticky .entryTitle {
+.entryTypePostExcerpt .sticky .entryTitle,
+.entryTypePostExcerpt .category-sticky .entryTitle{
     border-color: #ccc;
 }
 
-.entryTypePostExcerpt .sticky .entryContent p:last-child {
+.entryTypePostExcerpt .sticky .entryContent p:last-child,
+.entryTypePostExcerpt .category-sticky .entryContent p:last-child {
     margin-bottom: 0;
 }
