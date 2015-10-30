@@ -49,6 +49,10 @@ get_template_part('navigation');
                             <?php the_title(); ?>
                         </a>
                     </h2>
+
+                    <div class="postinfo postinfo-excerpt">
+                        <span><?php the_modified_date(); ?></span>
+                    </div>
                 </header>
 
                 <div class="entryContent">
