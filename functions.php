@@ -338,13 +338,9 @@
         // show edit button if user is logged in
         if (is_user_logged_in()):
             ?>
-
             <div class="custom-sidebar-widget postmeta-edit">
                 <div class="edit">
-                    <?php
-
-                        edit_post_link(__('edit', 'wikiwp'));
-                    ?>
+                    <?php edit_post_link(__('edit', 'wikiwp')); ?>
                 </div>
             </div>
         <?php endif;
