@@ -36,36 +36,11 @@ get_template_part('navigation');
         </div>
     </section>
 
-    <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
-
-        <article class="entry entryTypePostExcerpt">
-
-            <?php wikiwp_get_thumbnail($post); ?>
-
-            <div class="entryContainer">
-                <header class="entryHeader">
-                    <h2 class="entryTitle">
-                        <a href="<?php the_permalink(); ?>">
-                            <?php the_title(); ?>
-                        </a>
-                    </h2>
-
-                    <div class="postinfo postinfo-excerpt">
-                        <span><?php the_modified_date(); ?></span>
-                    </div>
-                </header>
-
-                <div class="entryContent">
-                    <?php the_excerpt(); ?>
-                </div>
-
-                <footer class="entryMeta">
-                    <?php get_template_part('postinfo' ); ?>
-                </footer>
-            </div>
-        </article>
-
-    <?php endwhile;
+    <?php
+    if ( have_posts() ) : while (have_posts()) : the_post();
+        // get post excerpt
+        wikiwp_get_post_excerpt($post);
+    endwhile;
 
     // Pagination
     echo '<div class="posts-pagination">';

@@ -345,3 +345,43 @@
             </div>
         <?php endif;
     }
+
+
+    /**
+     * Post excerpt output handling
+     *
+     * @return string formatted output in HTML
+     */
+    function wikiwp_get_post_excerpt($post) {
+        ?>
+
+        <article class="entry entryTypePostExcerpt">
+                    <div <?php post_class(); ?>>
+        <?php wikiwp_get_thumbnail($post); ?>
+
+        <div class="entryContainer">
+            <header class="entryHeader">
+                <h2 class="entryTitle">
+                    <a href="<?php the_permalink(); ?>">
+                        <?php the_title(); ?>
+                    </a>
+                </h2>
+
+                <div class="postinfo postinfo-excerpt">
+                    <span><?php the_modified_date(); ?></span>
+                </div>
+            </header>
+
+            <div class="entryContent">
+                <?php the_excerpt(); ?>
+            </div>
+
+            <footer class="entryMeta">
+                <?php get_template_part('postinfo' ); ?>
+            </footer>
+        </div>
+        </div>
+        </article>
+
+        <?php
+    }

@@ -1185,3 +1185,23 @@ aside {
 .entryTypePostExcerpt:last-child {
     margin-bottom: 0;
 }
+
+.entryTypePostExcerpt .entryContent p:first-child {
+    margin-top: 5px;
+}
+
+
+/* sticky post on excerpt */
+.entryTypePostExcerpt .sticky {
+    padding: 15px;
+    background-color: #F9F9F9;
+    border: 1px solid #E5E5E5;
+}
+
+.entryTypePostExcerpt .sticky .entryTitle {
+    border-color: #ccc;
+}
+
+.entryTypePostExcerpt .sticky .entryContent p:last-child {
+    margin-bottom: 0;
+}
