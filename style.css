@@ -1211,3 +1211,13 @@ aside {
 .entryTypePostExcerpt .category-sticky .entryContent p:last-child {
     margin-bottom: 0;
 }
+
+
+/* plugin support for SyntaxHighlighter Evolved */
+.syntaxhighlighter table tr {
+    vertical-align: inherit !important;
+}
+
+.syntaxhighlighter div {
+    padding-bottom: 0.5em !important;
+}
