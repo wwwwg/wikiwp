@@ -1214,8 +1214,11 @@ aside {
 
 
 /* plugin support for SyntaxHighlighter Evolved */
-.syntaxhighlighter table tr {
-    vertical-align: inherit !important;
+.syntaxhighlighter table td.gutter,
+.syntaxhighlighter table td.code {
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+    vertical-align: top !important;
 }
 
 .syntaxhighlighter div {
