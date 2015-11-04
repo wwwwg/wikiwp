@@ -202,8 +202,7 @@
             $query->query_vars['orderby'] = 'modified';
             $query->query_vars['order'] = 'DESC';
         } else {
-            $query->query_vars['orderby'] = 'name';
-            $query->query_vars['order'] = 'ASC';
+            $query->query_vars['orderby'] = 'order';
         }
     }
 
