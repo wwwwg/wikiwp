@@ -1055,9 +1055,17 @@ aside {
 
 .dynamic-sidebar-container { padding: 30px 0; }
 
-.dynamic-sidebar-widget {
+.primary-menu-side .dynamic-sidebar-widget,
+aside .dynamic-sidebar-widget {
     padding: 15px 15px 0 15px;
     color: #AAAAAA;
+}
+
+@media only screen and (min-width:768px) {
+    .primary-menu-side .dynamic-sidebar-widget,
+    aside .dynamic-sidebar-widget {
+        color: inherit;
+    }
 }
 
 .dynamic-sidebar-widget hr { margin: 15px 0 0 0; }
