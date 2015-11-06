@@ -36,20 +36,25 @@ get_template_part('navigation');
         </div>
     </section>
 
-    <?php
-    if ( have_posts() ) : while (have_posts()) : the_post();
-        // get post excerpt
-        wikiwp_get_post_excerpt($post);
-    endwhile;
+    <section class="entryTypePostExcerptContainer">
+        <?php
+        if ( have_posts() ) : while (have_posts()) : the_post();
+            // get post excerpt
+            wikiwp_get_post_excerpt($post);
+        endwhile;
+        ?>
+    </section>
 
-    // Pagination
-    echo '<div class="posts-pagination">';
-    previous_posts_link('<span class="next-posts-link">&laquo; '.__('Newer Entries', 'wikiwp').'</span>');
-    next_posts_link('<span class="previous-posts-link">'.__('Older Entries', 'wikiwp').' &raquo;</span>');
-    echo '</div>'; // End of .posts-pagination
-    // If no posts were found
-
-    endif; ?>
+    <section class="entryTypePostExcerptMeta">
+        <?php
+            // Pagination
+            echo '<div class="posts-pagination">';
+            previous_posts_link('<span class="next-posts-link">&laquo; '.__('Newer Entries', 'wikiwp').'</span>');
+            next_posts_link('<span class="previous-posts-link">'.__('Older Entries', 'wikiwp').' &raquo;</span>');
+            echo '</div>'; // End of .posts-pagination
+            // If no posts were found
+        endif; ?>
+    </section>
 </div>
 
 <?php

@@ -347,7 +347,7 @@ Text Domain: wikiwp
         border-right: 1px solid #E5E5E5;
         border-bottom: 1px solid #E5E5E5;
         border-left: 1px solid #E5E5E5;
-        padding: 30px;
+        padding: 30px 0;
         width: auto;
         -moz-hyphens: auto;
         hyphens: auto;
@@ -357,11 +357,6 @@ Text Domain: wikiwp
 
 
     /* Content */
-    .content {
-
-
-    }
-
     .content h2 {
         overflow: hidden;
         border-bottom: 1px solid #E5E5E5;
@@ -1186,16 +1181,24 @@ aside .dynamic-sidebar-widget {
 }
 
 
-.entryTypePostExcerpt {
-    margin-bottom: 30px;
+.entryTypePostExcerptHeader,
+.entryTypePostExcerptMeta,
+.entry,
+.comments,
+.last-posts-list {
+    padding: 0 30px;
 }
 
-.entryTypePostExcerpt:last-child {
-    margin-bottom: 0;
+.entryTypePostExcerpt {
+    padding: 15px 30px;
 }
 
 .entryTypePostExcerpt .entryContent p:first-child {
     margin-top: 5px;
+}
+
+.entryTypePostExcerpt .entryContent p:last-child {
+    margin-bottom: 0;
 }
 
 
@@ -1203,21 +1206,31 @@ aside .dynamic-sidebar-widget {
  * sticky post on excerpt
  * plugin support for Category Sticky Post
 */
-.entryTypePostExcerpt .sticky,
-.entryTypePostExcerpt .category-sticky {
-    padding: 15px;
+.entryTypePostExcerpt.sticky,
+.entryTypePostExcerpt.category-sticky {
+    margin-bottom: 5px;
+    padding: 30px;
     background-color: #F9F9F9;
-    border: 1px solid #E5E5E5;
 }
 
-.entryTypePostExcerpt .sticky .entryTitle,
-.entryTypePostExcerpt .category-sticky .entryTitle{
-    border-color: #ccc;
+.entryTypePostExcerpt.sticky,
+.entryTypePostExcerpt.category-sticky {
+    margin: 5px;
+    padding: 25px;
+    background-color: #F9F9F9;
 }
 
-.entryTypePostExcerpt .sticky .entryContent p:last-child,
-.entryTypePostExcerpt .category-sticky .entryContent p:last-child {
+.entryTypePostExcerptContainer .entry {
+
+}
+
+.entryTypePostExcerptContainer .sticky:last-child {
     margin-bottom: 0;
+}
+
+.entryTypePostExcerpt.sticky .entryTitle,
+.entryTypePostExcerpt.category-sticky .entryTitle{
+    border-color: #ccc;
 }
 
 
@@ -1231,4 +1244,13 @@ aside .dynamic-sidebar-widget {
 
 .syntaxhighlighter div {
     padding-bottom: 0.5em !important;
+}
+
+/* plugin support for pis */
+.pis-title {
+    margin-top: 0;
+}
+
+.pis-thumbnail {
+    margin: 0;
 }
