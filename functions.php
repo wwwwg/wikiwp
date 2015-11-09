@@ -13,6 +13,14 @@
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
+        /*
+	    * Enable support for Post Formats.
+	    * See https://developer.wordpress.org/themes/functionality/post-formats/
+	    */
+        add_theme_support( 'post-formats', array(
+            'status'
+        ) );
+
 		// Add thumbnail support
 		if ( function_exists( 'add_theme_support' ) ) { 
 			add_theme_support( 'post-thumbnails' );
