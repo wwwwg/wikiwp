@@ -48,13 +48,6 @@
         font-style: italic;
     }
 
-    p {
-        margin-top: 1em;
-        margin-bottom: 1em;
-        line-height: 1.5em;
-        text-align: justify;
-    }
-
     a { color: #2487D7; }
 
     a:link { text-decoration: none; }

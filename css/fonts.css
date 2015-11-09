@@ -1,5 +1,118 @@
 @charset "UTF-8";
 
+
+.cat-title,
+.page-title,
+.entryTitle {
+    margin-top: 0;
+}
+
+p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+}
+
+a:focus,
+a:active,
+a:hover {
+    outline: none;
+}
+
+ul, ol, dl {
+    padding-left: 15px;
+    list-style-position: inside;
+}
+
+li,
+dt,
+dd {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+ol {
+    counter-reset: item
+}
+
+ol li {
+    display: block;
+}
+
+ol li:before {
+    content: counters(item, ".") ".";
+    counter-increment: item;
+    padding-left: 1em;
+    padding-right: 0.2em;
+    margin-left: -1em;
+}
+
+dt {
+    margin-top: 1em;
+    font-family: serif;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+thead th {
+    background-color: #F0F0F0;
+}
+
+th, td {
+    border: 1px solid #E5E5E5;
+    padding: 0.6em;
+}
+
+th {
+    background-color: #F9F9F9;
+}
+
+blockquote {
+    position: relative;
+    border: none;
+    margin-left: 3.5em;
+    font-family: serif;
+    font-size: 1em;
+    color: #4D4D4D;
+}
+
+blockquote:before {
+    position: absolute;
+    top: -0.3em;
+    left: -0.6em;
+    content: '“';
+    font-size: 2.5em;
+    font-family: serif;
+    color: #AAAAAA;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+label {
+    width: 100%;
+    font-weight: normal;
+}
+
+input,
+textarea {
+    -webkid-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    clear: both;
+    border-style: solid;
+    border-width: 1px;
+    width: 100%;
+    max-width: 100%;
+}
+
+input {
+    height: auto;
+}
+
+
+/* article */
 article.entry h2 {
     overflow: hidden;
     border-bottom: 1px solid #E5E5E5;
