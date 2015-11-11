@@ -202,15 +202,17 @@
     add_action( 'init', 'wikiwp_custom_menus' );
 
 
-    // ORDER POSTS IN CATEGORIES
-    add_action( 'pre_get_posts', 'custom_get_posts' );
+    // order posts in categories
+    if (!function_exists ('wikiwpCustomPostOrder')) {
+        add_action('pre_get_posts', 'wikiwpCustomPostOrder');
 
-    function custom_get_posts( $query ) {
-        if( (is_category('news')) ) {    
-            $query->query_vars['orderby'] = 'modified';
-            $query->query_vars['order'] = 'DESC';
-        } else {
-            $query->query_vars['orderby'] = 'order';
+        function wikiwpCustomPostOrder($query) {
+            if( (is_category('news')) ) {
+                $query->query_vars['orderby'] = 'modified';
+                $query->query_vars['order'] = 'DESC';
+            } else {
+                $query->query_vars['orderby'] = 'order';
+            }
         }
     }
 
