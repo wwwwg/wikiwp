@@ -7,6 +7,45 @@
     margin-top: 0;
 }
 
+h1 {
+    font-family: Georgia,serif;
+    font-size: 2.2em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 1.2em;
+    margin-bottom: 0.2em;
+    font-family: Georgia,serif;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 1em;
+    font-style: italic;
+}
+
 p {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -97,12 +136,11 @@ label {
 
 input,
 textarea {
-    -webkid-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
     clear: both;
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid;
     width: 100%;
     max-width: 100%;
 }
@@ -115,6 +153,6 @@ input {
 /* article */
 article.entry h2 {
     overflow: hidden;
-    border-bottom: 1px solid #E5E5E5;
+    border-bottom: 1px solid #bbbbbb;
     line-height: 1.4em;
 }
