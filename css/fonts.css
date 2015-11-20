@@ -62,13 +62,6 @@ ul, ol, dl {
     padding-left: 15px;
 }
 
-li,
-dt,
-dd {
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-}
-
 ol {
     display: table;
     margin: 0;
@@ -94,6 +87,13 @@ dt {
     font-family: serif;
     font-size: 1.1em;
     font-weight: bold;
+}
+
+li,
+dt,
+dd {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
 }
 
 thead th {
