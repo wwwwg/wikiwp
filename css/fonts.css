@@ -60,7 +60,6 @@ a:hover {
 
 ul, ol, dl {
     padding-left: 15px;
-    list-style-position: inside;
 }
 
 li,
@@ -71,19 +70,23 @@ dd {
 }
 
 ol {
+    display: table;
+    margin: 0;
+    padding: 0;
     counter-reset: item
 }
 
-ol li {
-    display: block;
+ol > li {
+    counter-increment: foo;
+    display: table-row;
 }
 
 ol li:before {
-    content: counters(item, ".") ".";
+    content: counters(item, '.') '.';
     counter-increment: item;
-    padding-left: 1em;
-    padding-right: 0.2em;
-    margin-left: -1em;
+    padding-right: 5px;
+    display: table-cell;
+    text-align: right;
 }
 
 dt {
