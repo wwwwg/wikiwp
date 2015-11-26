@@ -909,6 +909,10 @@ aside {
 
 .aside-container a:visited { color: #3363B7; }
 
+.sidebarContent {
+    margin: 15px 0;
+}
+
 .widget-title  { margin-top: 0; }
 
 

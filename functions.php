@@ -388,7 +388,7 @@
                             while ($my_query->have_posts()) : $my_query->the_post();
                                 echo '<li><a href="'.get_permalink().'" rel="bookmark" title="';
                                 the_title_attribute();
-                                echo '"><div class="thumb">'.get_the_post_thumbnail($post->ID, 'mini').'</div>',
+                                echo '"><div class="thumb">'.get_the_post_thumbnail('mini').'</div>',
                                     '<span>'.get_the_title().'</span>',
                                 '</a></li>';
                             endwhile;
@@ -397,16 +397,29 @@
                 }
                 // if post has no tags show related posts by category
                 else {
-                    $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
-                    if( $related ) foreach( $related as $post ) {
-                        setup_postdata($post);
-                        echo '<li><a href="'.get_permalink().'" rel="bookmark" title="';
-                        the_title_attribute();
-                        echo '"><div class="related-post-thumb">'.get_the_post_thumbnail($page->ID, 'mini').'</div>',
-                            '<span>'.get_the_title().'</span>',
-                        '</a></li>';
+                    $categories = get_the_category();
+                    foreach ($categories as $category) {
+                        $cat = $category->cat_ID;
+                        $args=array(
+                            'cat' => $cat,
+                            'order' =>DESC,
+                            'post__not_in' => array($post->ID),
+                            'posts_per_page'=>5,
+                        );
+                        $my_query = null;
+                        $my_query = new WP_Query($args);
+                        if( $my_query->have_posts() ) {
+                            $i = 0; while ($my_query->have_posts() && $i < 5) : $my_query->the_post();
+
+                                echo '<li><a href="'.get_permalink().'" rel="bookmark" title="';
+                                the_title_attribute();
+                                echo '"><div class="thumb">'.get_the_post_thumbnail('mini').'</div>',
+                                    '<span>'.get_the_title().'</span>',
+                                '</a></li>';
+
+                                $i++; endwhile; }
                     }
-                    wp_reset_postdata();
+                    wp_reset_query();
                 }
                 ?>
             </ul>
