@@ -337,6 +337,84 @@
         }
     }
 
+    /**
+     * Tags output handling
+     *
+     * @return string formatted output in HTML
+     */
+    function wikiwp_get_tags($post) {
+
+        _e('Tags', 'wikiwp');
+        echo ':&nbsp;';
+        $tag = get_the_tags();
+        if (! $tag) {
+            echo 'There are no tags for this post';
+        } else {
+            the_tags('',', ','');
+        }
+
+    }
+
+
+    /**
+     * Realted posts output handling
+     *
+     * @return string formatted output in HTML
+     */
+    function wikiwp_get_related_posts($post) {
+        ?>
+
+        <div class="relatedPosts">
+
+            <h3>
+                <?php _e('Related Posts', 'wikiwp'); ?>
+            </h3>
+
+            <ul class="relatedPostList">
+                <?php // if post has tags show related posts by tags
+                if( has_tag() ) {
+                    $tags = wp_get_post_tags($post->ID);
+                    if ($tags) {
+                        $tag_ids = array();
+                        foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
+                        $args=array(
+                            'tag__in' => $tag_ids,
+                            'post__not_in' => array($post->ID),
+                            'showposts'=>5,
+                            'ignore_sticky_posts'=>1
+                        );
+                        $my_query = new WP_Query($args);
+                        if( $my_query->have_posts() ) {
+                            while ($my_query->have_posts()) : $my_query->the_post();
+                                echo '<li><a href="'.get_permalink().'" rel="bookmark" title="';
+                                the_title_attribute();
+                                echo '"><div class="thumb">'.get_the_post_thumbnail($post->ID, 'mini').'</div>',
+                                    '<span>'.get_the_title().'</span>',
+                                '</a></li>';
+                            endwhile;
+                        }
+                    }
+                }
+                // if post has no tags show related posts by category
+                else {
+                    $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
+                    if( $related ) foreach( $related as $post ) {
+                        setup_postdata($post);
+                        echo '<li><a href="'.get_permalink().'" rel="bookmark" title="';
+                        the_title_attribute();
+                        echo '"><div class="related-post-thumb">'.get_the_post_thumbnail($page->ID, 'mini').'</div>',
+                            '<span>'.get_the_title().'</span>',
+                        '</a></li>';
+                    }
+                    wp_reset_postdata();
+                }
+                ?>
+            </ul>
+        </div>
+
+        <?php
+    }
+
 
     /**
      * Edit post link output handling

@@ -602,35 +602,30 @@ Text Domain: wikiwp
         padding: 5px;
     }
     
-    .related-post-thumb {
+    .relatedPosts .thumb {
         display: inline-block;
         float: left;
         margin-right: 0.6em;
-        height: auto;  
+        height: auto;
         width: 40px;
     }
 
-    .related-posts {
-        margin-top: 0.6em;
+    .relatedPostList {
+        margin: 0;
         padding: 0;
         list-style: none;
     }
 
-    .related-posts li {
+    .relatedPostList li {
         display: block;
         clear: left;
         margin: 0;
         padding: 0.6em 0;
     }
     
-    .related-posts li a {
+    .relatedPostList li a {
         display: inline-block;
         clear: left;
-    }
-
-    .related .thumbnail-mini img {
-        height: auto;  
-        width: 100%;
     }
 
 

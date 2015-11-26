@@ -178,6 +178,8 @@ elseif (in_category('wiki')) {
             the_tags('',', ','');
         }
         echo '</span>',
+
+
             // get 5 related posts
         '<div class="postmeta-section related">',
             '<strong>'.__('Related Posts', 'wikiwp').'</strong>',

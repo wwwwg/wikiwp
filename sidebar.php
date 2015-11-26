@@ -1,50 +1,71 @@
-<?php
-	// WRAPPER
-	echo '<aside>',
-		 '<div class="aside-container">';
+<aside>
+    <div class="aside-container">
+        <div class="custom-sidebar">
+            <?php
+            if (is_single() || is_page()) {
+                while (have_posts()) : the_post();
+                    // get thumbnail
+                    wikiwp_get_thumbnail($post);
 
-	// HOME
-	if (is_category() || is_home() || is_front_page()) {
-		get_template_part('partials/sidebar-default');
-	}
+                    // show edit button if user is logged in
+                    wikiwp_get_edit_post_link($post);
+            ?>
 
-	// STATIC PAGE
-	elseif (is_page()) {
-		// wiki page
-		if (is_page_template('wiki-page.php')) {
-			get_template_part('partials/sidebar-wiki-page');
-		}
+            <div>
+                <?php the_title(); ?>
+            </div>
 
-		// default
-		else {
-			get_template_part('partials/sidebar-page');
-		}
-	}
+            <div>
+                <?php
+                // modified date
+                _e('Last update on', 'wikiwp');
+                the_modified_date();
+                ?>
+            </div>
 
-	// SINGLE POST
-	elseif (is_single()) {
-		// wiki category
-		if (in_category('wiki')) {
-			get_template_part('partials/sidebar-wiki');
-		}
+            <div>
+                <?php
+                // publishing date
+                _e('Published', 'wikiwp');
+                echo '&nbsp;';
+                the_date();
+                ?>
+            </div>
 
-		// default
-		else {
-			get_template_part('partials/sidebar-single');
-		}
-	}
+            <div>
+                <?php
+                _e('Author', 'wikiwp');
+                echo ':</strong>&nbsp;';
+                the_author_posts_link();
+                echo '</span>';
+                ?>
+            </div>
 
-	// SEARCH
-	elseif (is_search()) {
-		get_template_part('partials/sidebar-search');
-	}
+            <div>
+                <?php
+                // categories
+                _e('Categories', 'wikiwp');
+                echo ':&nbsp;';
+                the_category(', ');
+                ?>
+            </div>
 
-	// DYNAMIC SIDEBAR
-	echo '<div class="dynamic-sidebar-container">';
-	if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : endif;
-	echo '</div>';
 
-	// END OF WRAPPER
-	echo '</div>
-		 </aside>
-		 <div class="aside-menu-button">Sidebar</div>';
+
+                    <?php wikiwp_get_tags($post); ?>
+
+                    <?php wikiwp_get_related_posts($post); ?>
+
+            <?php
+                endwhile;
+            }
+            ?>
+</div>
+
+<div class="dynamic-sidebar-container">
+    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : endif; ?>
+</div>
+</div>
+</aside>
+
+<div class="aside-menu-button">Sidebar</div>';
