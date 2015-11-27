@@ -913,7 +913,50 @@ aside {
     margin: 15px 0;
 }
 
-.widget-title  { margin-top: 0; }
+.widget {
+    padding: 5px 0;
+}
+
+.widget:first-child {
+    padding-top: 0;
+}
+
+.widget:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+
+.widget ul,
+.widget ul li {
+    margin: 0;
+    padding-right: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.widget input {
+    border-right: none;
+    background: white;
+}
+
+.widget img {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.widget .search-form label {
+    width: 70%;
+}
+
+.widget .search-form input.search-field { width: 100%; }
+
+.widget .search-form .search-submit {
+    float: right;
+    margin-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+    width: 30%;
+}
 
 
 /* IF ADMIN BAR IS SHOWN */
@@ -973,51 +1016,6 @@ aside .dynamic-sidebar-widget {
     }
 }
 
-.dynamic-sidebar-widget hr { margin: 15px 0 0 0; }
-
-.dynamic-sidebar-widget h2:first-child,
-.dynamic-sidebar-widget h3:first-child,
-.dynamic-sidebar-widget h4:first-child,
-.dynamic-sidebar-widget h5:first-child,
-.dynamic-sidebar-widget h6:first-child,
-.dynamic-sidebar-widget p:first-child { margin-top: 0; }
-
-.dynamic-sidebar-widget:last-child hr { border-color: transparent; }
-
-.dynamic-sidebar-widget ul,
-.dynamic-sidebar-widget ul li {
-    margin: 0;
-    padding-right: 0;
-    padding-left: 0;
-    list-style: none;
-}
-
-.dynamic-sidebar-widget input {
-    border-right: none;
-    background: white;
-}
-
-.dynamic-sidebar-widget img {
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.dynamic-sidebar-widget .search-form label {
-    width: 70%;
-}
-
-.dynamic-sidebar-widget .search-form input.search-field { width: 100%; }
-
-.dynamic-sidebar-widget .search-form .search-submit {
-    float: right;
-    margin-top: 0;
-    padding-right: 0;
-    padding-left: 0;
-    width: 30%;
-}
-
-/* custom sidebar */
-.custom-sidebar-widget { padding: 15px 15px 0 15px; }
 
 /* 768px */
 @media only screen and (min-width:768px) {
@@ -1041,7 +1039,9 @@ aside .dynamic-sidebar-widget {
 
 
     /* dynamic sidebar */
-    .dynamic-sidebar-widget { color: #4D4D4D; }
+    .widget {
+        color: #4D4D4D;
+    }
 }
 
 

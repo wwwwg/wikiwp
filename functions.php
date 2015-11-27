@@ -236,9 +236,9 @@
 	        'name' => __( 'Sidebar', 'wikiwp' ),
 	        'id' => 'sidebar-1',
 	        'description' => __( 'Sidebar on the right hand of the website', 'wikiwp' ),
-            'before_widget' => '<div class="dynamic-sidebar-widget">',
-            'after_widget' => '<hr></div>',
-            'before_title' => '<h3 class="widget-title">',
+            'before_widget' => '<div class="widget">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="widgetTitle">',
             'after_title' => '</h3>',
 	    ) );
 
@@ -248,9 +248,9 @@
             'name' => 'Navigation',
             'id' => 'navigation',
             'description' => 'Appears as the sidebar beneath the navigation',
-            'before_widget' => '<div class="dynamic-sidebar-widget"><ul>',
-            'after_widget' => '<hr></ul></div>',
-            'before_title' => '<h3 class="widget-title">',
+            'before_widget' => '<div class="widget"><ul>',
+            'after_widget' => '</ul></div>',
+            'before_title' => '<h3 class="widgetTitle">',
             'after_title' => '</h3>',
             ));
         }
@@ -261,7 +261,7 @@
             'name' => 'Footer left',
             'id' => 'footer-left',
             'description' => 'Place your widgets here for the left side of the footer',
-            'before_widget' => '<ul class="dynamic-sidebar-widget sidebar-footer-widget">',
+            'before_widget' => '<ul class="widget sidebar-footer-widget">',
             'after_widget' => '</ul>',
             'before_title' => '<h3>',
             'after_title' => '</h3>',

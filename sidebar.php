@@ -13,48 +13,53 @@
 
             <div class="row sidebarContent">
                 <div class="col-md-12">
-                    <?php the_title(); ?>
-                </div>
+                    <div class="widget">
+                        <h3 class="widgetTitle"><?php the_title(); ?></h3>
+                    </div>
 
-                <div class="col-md-12">
-                    <?php
-                    // modified date
-                    _e('Last update on', 'wikiwp');
-                    the_modified_date();
-                    ?>
-                </div class="col-md-12">
+                    <div class="widget">
+                        <?php
+                        // modified date
+                        _e('Last update on', 'wikiwp');
+                        echo '&nbsp;';
+                        the_modified_date();
+                        ?>
+                    </div>
 
-                <div class="col-md-12">
-                    <?php
-                    // publishing date
-                    _e('Published', 'wikiwp');
-                    echo '&nbsp;';
-                    the_date();
-                    ?>
-                </div>
+                    <div class="widget">
+                        <div class="">
+                            <?php
+                            // publishing date
+                            _e('Published', 'wikiwp');
+                            echo '&nbsp;';
+                            the_date();
+                            ?>
+                        </div>
 
-                <div class="col-md-12">
-                    <?php
-                    _e('Author', 'wikiwp');
-                    echo ':</strong>&nbsp;';
-                    the_author_posts_link();
-                    echo '</span>';
-                    ?>
-                </div>
+                        <div class="">
+                            <?php
+                            _e('Author', 'wikiwp');
+                            echo ':</strong>&nbsp;';
+                            the_author_posts_link();
+                            echo '</span>';
+                            ?>
+                        </div>
 
-                <div class="col-md-12">
-                    <?php
-                    // categories
-                    _e('Categories', 'wikiwp');
-                    echo ':&nbsp;';
-                    the_category(', ');
-                    ?>
-                </div>
+                        <div class="">
+                            <?php
+                            // categories
+                            _e('Categories', 'wikiwp');
+                            echo ':&nbsp;';
+                            the_category(', ');
+                            ?>
+                        </div>
 
-                <div class="col-md-12">
-                    <?php wikiwp_get_tags($post); ?>
+                        <?php wikiwp_get_tags($post); ?>
+                    </div>
 
-                    <?php wikiwp_get_related_posts($post); ?>
+                    <div class="widget">
+                        <?php wikiwp_get_related_posts($post); ?>
+                    </div>
                 </div>
             </div>
 
@@ -62,12 +67,16 @@
                 endwhile;
             }
             ?>
-</div>
+        </div>
 
-<div class="dynamic-sidebar-container">
-    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : endif; ?>
-</div>
-</div>
+        <div class="dynamic-sidebar">
+            <div class="row sidebarContent">
+                <div class="col-md-12">
+                    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
 </aside>
 
-<div class="aside-menu-button">Sidebar</div>';
+<div class="aside-menu-button">Sidebar</div>
