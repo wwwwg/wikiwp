@@ -331,7 +331,7 @@
                     echo '<a class="postmeta-thumbnail" href="' . $medium_fix_width_image_url[0] . '" title="' . the_title_attribute('echo=0') . '" >hallo</a>';
                 } else {
                     $thumbnail_large_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
-                    echo '<a class="postmeta-thumbnail" href="' . $thumbnail_large_url[0] . '" title="' . the_title_attribute('echo=0') . '" >' . get_the_post_thumbnail($post_id, 'large') . '</a>';
+                    echo '<a class="postmeta-thumbnail" href="' . $thumbnail_large_url[0] . '" title="' . the_title_attribute('echo=0') . '" >' . get_the_post_thumbnail($post->ID, 'large') . '</a>';
                 }
             }
         }
@@ -362,9 +362,9 @@
      * @return string formatted output in HTML
      */
     function wikiwp_get_related_posts($post) {
-        ?>
-
-        <div class="relatedPosts">
+        if (is_single()) {
+            ?>
+            <div class="widget relatedPosts">
 
             <h3>
                 <?php _e('Related Posts', 'wikiwp'); ?>
@@ -402,7 +402,9 @@
                         $cat = $category->cat_ID;
                         $args=array(
                             'cat' => $cat,
-                            'order' =>DESC,
+                            'orderby' => 'title',
+                            'order'   => 'DESC',
+
                             'post__not_in' => array($post->ID),
                             'posts_per_page'=>5,
                         );
@@ -424,8 +426,8 @@
                 ?>
             </ul>
         </div>
-
         <?php
+        }
     }
 
 
@@ -436,14 +438,17 @@
      */
     function wikiwp_get_edit_post_link($post) {
         // show edit button if user is logged in
-        if (is_user_logged_in()):
+        if (is_user_logged_in()) {
             ?>
-            <div class="custom-sidebar-widget postmeta-edit">
-                <div class="edit">
-                    <?php edit_post_link(__('edit', 'wikiwp')); ?>
+            <div class="col-md-12">
+                <div class="widget postMetaEdit">
+                    <div class="edit">
+                        <?php edit_post_link(__('edit', 'wikiwp')); ?>
+                    </div>
                 </div>
             </div>
-        <?php endif;
+            <?php
+        }
     }
 
 

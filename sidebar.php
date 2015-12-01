@@ -2,7 +2,7 @@
     <div class="aside-container container-full">
         <div class="custom-sidebar">
             <?php
-            if (is_single() || is_page()) {
+            if (is_single() || is_page_template( 'wiki-page.php' )) {
                 while (have_posts()) : the_post();
                     // get thumbnail
                     wikiwp_get_thumbnail($post);
@@ -57,9 +57,7 @@
                         <?php wikiwp_get_tags($post); ?>
                     </div>
 
-                    <div class="widget">
-                        <?php wikiwp_get_related_posts($post); ?>
-                    </div>
+                    <?php wikiwp_get_related_posts($post); ?>
                 </div>
             </div>
 
