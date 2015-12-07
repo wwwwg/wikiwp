@@ -6,13 +6,15 @@
                 while (have_posts()) : the_post();
                     // get thumbnail
                     wikiwp_get_thumbnail($post);
-
-                    // show edit button if user is logged in
-                    wikiwp_get_edit_post_link($post);
             ?>
 
             <div class="row sidebarContent">
                 <div class="col-md-12">
+                    <?php
+                    // show edit button if user is logged in
+                    wikiwp_get_edit_post_link($post);
+                    ?>
+
                     <div class="widget">
                         <h3 class="widgetTitle"><?php the_title(); ?></h3>
                     </div>
@@ -63,6 +65,17 @@
 
             <?php
                 endwhile;
+            } else {
+                ?>
+                <div class="row sidebarContent">
+                    <div class="col-md-12">
+                        <?php
+                        // show edit button if user is logged in
+                        wikiwp_get_edit_post_link($post);
+                        ?>
+                    </div>
+                </div>
+                <?php
             }
             ?>
         </div>

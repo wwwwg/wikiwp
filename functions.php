@@ -238,8 +238,8 @@
 	        'description' => __( 'Sidebar on the right hand of the website', 'wikiwp' ),
             'before_widget' => '<div class="widget">',
             'after_widget' => '</div>',
-            'before_title' => '<h3 class="widgetTitle">',
-            'after_title' => '</h3>',
+            'before_title' => '<h4 class="widgetTitle">',
+            'after_title' => '</h4>',
 	    ) );
 
         // Custom sidebar navigation
@@ -250,8 +250,8 @@
             'description' => 'Appears as the sidebar beneath the navigation',
             'before_widget' => '<div class="widget"><ul>',
             'after_widget' => '</ul></div>',
-            'before_title' => '<h3 class="widgetTitle">',
-            'after_title' => '</h3>',
+            'before_title' => '<h4 class="widgetTitle">',
+            'after_title' => '</h4>',
             ));
         }
 
@@ -263,8 +263,8 @@
             'description' => 'Place your widgets here for the left side of the footer',
             'before_widget' => '<ul class="widget sidebar-footer-widget">',
             'after_widget' => '</ul>',
-            'before_title' => '<h3>',
-            'after_title' => '</h3>',
+            'before_title' => '<h4 class="widgetTitle">',
+            'after_title' => '</h4>',
             ));
         }
 
@@ -276,8 +276,8 @@
             'description' => 'Place your widgets here for the middle of the footer',
             'before_widget' => '<ul class="dynamic-sidebar-widget sidebar-footer-widget">',
             'after_widget' => '</ul>',
-            'before_title' => '<h3>',
-            'after_title' => '</h3>',
+            'before_title' => '<h4 class="widgetTitle">',
+            'after_title' => '</h4>',
             ));
         }
 
@@ -289,8 +289,8 @@
             'description' => 'Place your widgets here for the right side of the footer',
             'before_widget' => '<ul class="dynamic-sidebar-widget sidebar-footer-widget">',
             'after_widget' => '</ul>',
-            'before_title' => '<h3>',
-            'after_title' => '</h3>',
+            'before_title' => '<h4 class="widgetTitle">',
+            'after_title' => '</h4>',
             ));
         }
     }
@@ -440,11 +440,9 @@
         // show edit button if user is logged in
         if (is_user_logged_in()) {
             ?>
-            <div class="col-md-12">
-                <div class="widget postMetaEdit">
-                    <div class="edit">
-                        <?php edit_post_link(__('edit', 'wikiwp')); ?>
-                    </div>
+            <div class="widget postMetaEdit">
+                <div class="edit">
+                    <?php edit_post_link(__('edit', 'wikiwp')); ?>
                 </div>
             </div>
             <?php
