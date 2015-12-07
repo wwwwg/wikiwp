@@ -357,7 +357,7 @@
 
 
     /**
-     * Realted posts output handling
+     * Related posts output handling
      *
      * @return string formatted output in HTML
      */
@@ -366,9 +366,9 @@
             ?>
             <div class="widget relatedPosts">
 
-            <h3>
+            <h4 class="widgetTitle">
                 <?php _e('Related Posts', 'wikiwp'); ?>
-            </h3>
+            </h4>
 
             <ul class="relatedPostList">
                 <?php // if post has tags show related posts by tags
@@ -379,49 +379,62 @@
                         foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
                         $args=array(
                             'tag__in' => $tag_ids,
+                            'orderby' => 'title',
+                            'order'   => 'DESC',
                             'post__not_in' => array($post->ID),
-                            'showposts'=>5,
-                            'ignore_sticky_posts'=>1
+                            'posts_per_page'=>5,
                         );
                         $my_query = new WP_Query($args);
                         if( $my_query->have_posts() ) {
-                            while ($my_query->have_posts()) : $my_query->the_post();
-                                echo '<li><a href="'.get_permalink().'" rel="bookmark" title="';
-                                the_title_attribute();
-                                echo '"><div class="thumb">'.get_the_post_thumbnail('mini').'</div>',
-                                    '<span>'.get_the_title().'</span>',
-                                '</a></li>';
-                            endwhile;
+                            while ($my_query->have_posts()) {
+                                $my_query->the_post();
+                                ?>
+                                <li>
+                                    <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+                                        <div class="thumb">
+                                            <?php the_post_thumbnail('mini'); ?>
+                                        </div>
+
+                                        <span><?php the_title(); ?></span>
+                                    </a>
+                                </li>
+                                <?php
+                            }
                         }
                     }
                 }
                 // if post has no tags show related posts by category
                 else {
-                    $categories = get_the_category();
-                    foreach ($categories as $category) {
-                        $cat = $category->cat_ID;
-                        $args=array(
-                            'cat' => $cat,
+                    $categories = get_the_category($post->ID);
+                    if ($categories) {
+                        $category_ids = array();
+                        foreach ($categories as $individual_category) $category_ids[] = $individual_category->term_id;
+
+                        $args = array(
+                            'category__in' => $category_ids,
                             'orderby' => 'title',
                             'order'   => 'DESC',
-
                             'post__not_in' => array($post->ID),
                             'posts_per_page'=>5,
                         );
-                        $my_query = null;
-                        $my_query = new WP_Query($args);
+                        $my_query = new wp_query($args);
                         if( $my_query->have_posts() ) {
-                            $i = 0; while ($my_query->have_posts() && $i < 5) : $my_query->the_post();
+                            while ($my_query->have_posts()) {
+                                $my_query->the_post();
+                                ?>
+                                <li>
+                                    <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+                                        <div class="thumb">
+                                            <?php the_post_thumbnail('mini'); ?>
+                                        </div>
 
-                                echo '<li><a href="'.get_permalink().'" rel="bookmark" title="';
-                                the_title_attribute();
-                                echo '"><div class="thumb">'.get_the_post_thumbnail('mini').'</div>',
-                                    '<span>'.get_the_title().'</span>',
-                                '</a></li>';
-
-                                $i++; endwhile; }
+                                        <span><?php the_title(); ?></span>
+                                    </a>
+                                </li>
+                                <?php
+                            }
+                        }
                     }
-                    wp_reset_query();
                 }
                 ?>
             </ul>

@@ -605,9 +605,13 @@ Text Domain: wikiwp
     .relatedPosts .thumb {
         display: inline-block;
         float: left;
-        margin-right: 0.6em;
+        margin: 0 10px 0 0;
         height: auto;
         width: 40px;
+    }
+
+    .relatedPosts .thumb img {
+        margin: 0;
     }
 
     .relatedPostList {
@@ -970,7 +974,7 @@ aside {
 
 @media only screen and (min-width:768px) {
     .admin-bar aside {
-        padding-top: 0;
+        padding-top: 32px;
     }
 }
 
