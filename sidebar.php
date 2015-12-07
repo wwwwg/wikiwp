@@ -1,6 +1,6 @@
 <aside>
     <div class="aside-container container-full">
-        <div class="custom-sidebar">
+        <div class="customSidebar">
             <?php
             if (is_single() || is_page_template( 'wiki-page.php' )) {
                 while (have_posts()) : the_post();
@@ -80,7 +80,7 @@
             ?>
         </div>
 
-        <div class="dynamic-sidebar">
+        <div class="dynamicSidebar">
             <div class="row sidebarContent">
                 <div class="col-md-12">
                     <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : endif; ?>

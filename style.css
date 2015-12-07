@@ -909,7 +909,7 @@ aside {
 
 .aside-container a:visited { color: #3363B7; }
 
-.sidebarContent {
+.row.sidebarContent {
     margin: 15px 0;
 }
 
@@ -958,13 +958,17 @@ aside {
     width: 30%;
 }
 
-.dynamic-sidebar {
-    margin-top: 30px;
-}
-
 
 /* IF ADMIN BAR IS SHOWN */
-.admin-bar aside { margin-top: 46px; }
+.admin-bar aside {
+    padding-top: 46px;
+}
+
+@media only screen and (min-width:768px) {
+    .admin-bar aside {
+        padding-top: 0;
+    }
+}
 
 .admin-bar .aside-menu-button { top: 46px; }
 
@@ -1007,15 +1011,14 @@ aside {
 
 .dynamic-sidebar-container { padding: 30px 0; }
 
-.primary-menu-side .dynamic-sidebar-widget,
-aside .dynamic-sidebar-widget {
-    padding: 15px 15px 0 15px;
+.primary-menu-side .widget,
+aside .widget {
     color: #AAAAAA;
 }
 
 @media only screen and (min-width:768px) {
-    .primary-menu-side .dynamic-sidebar-widget,
-    aside .dynamic-sidebar-widget {
+    .primary-menu-side .widget,
+    aside .widget {
         color: inherit;
     }
 }
@@ -1032,8 +1035,6 @@ aside .dynamic-sidebar-widget {
 
     /* IF ADMIN BAR IS SHOWN */
     .admin-bar .aside-menu-button { top: 30px; }
-
-    .admin-bar aside { margin-top: 30px; }
 
     .aside-container { padding-top: 0; }
 
