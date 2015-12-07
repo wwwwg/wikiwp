@@ -897,6 +897,10 @@ aside {
     background: #333333;
 }
 
+.customSidebar .widget:last-child {
+    border-bottom: 1px solid #E5E5E5;
+}
+
 .aside-container {
     overflow-y: auto;
     padding-top: 62px;
