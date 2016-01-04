@@ -8,7 +8,7 @@
 
 The WikiWP theme is released under the MIT license. For detailed information see [license.md](https://github.com/FlorianSteller/wikiwp/blob/master/license.md)
 
-## Localisation
+## Localization
 
 + English (default)
 + German (de_DE.mo by Florian Steller)
