@@ -52,12 +52,28 @@ p {
     line-height: 1.5em;
 }
 
+
+/* links */
 a:focus,
 a:active,
 a:hover {
     outline: none;
 }
 
+a {
+    color: #2487D7;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #135995;
+}
+
+
+/* lists */
 ul, ol, dl {
     padding-left: 15px;
 }

@@ -10,12 +10,6 @@
     }
 
     /* FONTS */
-    a { color: #2487D7; }
-
-    a:link { text-decoration: none; }
-
-    a:visited { color: #135995; }
-
     input {
         border-color: #E5E5E5;
         padding: 0.6em;

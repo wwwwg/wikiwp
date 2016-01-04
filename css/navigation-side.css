@@ -54,20 +54,20 @@
         padding: 0;
     }
     
-    .primary-menu-side a { 
+    .primary-menu-side .nav-container a {
         display: block;
         border-left: 5px solid transparent;
         padding: 5px 15px 5px 10px;
         color: #aaaaaa;
     }
     
-    .primary-menu-side a:hover { 
+    .primary-menu-side .nav-container a:hover {
         border-color: #444444;
         background: #444444; 
     }
     
-    .primary-menu-side a:hover,
-    .primary-menu-side a:visited { color: #aaaaaa; }
+    .primary-menu-side .nav-container a:hover,
+    .primary-menu-side .nav-container a:visited { color: #aaaaaa; }
     
     .primary-menu-side .current-menu-item a,
     .primary-menu-side .current_page_item a,
@@ -77,14 +77,14 @@
     }
     
      /* sub menu 2nd level */
-    .primary-menu-side .sub-menu a { 
+    .primary-menu-side .sub-menu a {
         border-left: 5px solid transparent;
         padding-left: 30px;
         background: transparent;
     }
     
     /* sub menu 2nd level stati */
-    .primary-menu-side .sub-menu a:hover { 
+    .primary-menu-side .sub-menu a:hover {
         border-color: #444444;
         background: #444444; 
     }
@@ -237,13 +237,19 @@
         color: #4D4D4D;
     }
     
-    .primary-menu-side a,    
-    .primary-menu-side a:hover,
-    .primary-menu-side a:visited { color: #252525; }
-    
-    .primary-menu-side a:hover { 
+    .primary-menu-side .nav-container a {
+        color: #2487D7;
+    }
+
+    .primary-menu-side .nav-container a:hover {
         border-color: #E8E8E8;
-        background: #E8E8E8; 
+        color: #2487D7;
+        background: #E8E8E8;
+    }
+
+    .primary-menu-side .nav-container a:visited {
+        color: #135995;
+        background: transparent;
     }
     
     .primary-menu-side .current-menu-item a,
