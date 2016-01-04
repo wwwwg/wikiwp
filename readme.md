@@ -8,6 +8,12 @@
 
 The WikiWP theme is released under the MIT license. For detailed information see [license.md](https://github.com/FlorianSteller/wikiwp/blob/master/license.md)
 
+## Localisation
+
++ English (default)
++ German (de_DE.mo by Florian Steller)
++ Brazilian Portuguese (pt_BR.mo by Mauro Mascarenhas)
+
 ## Changelog
 
 ### Current Version: 1.8
