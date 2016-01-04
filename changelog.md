@@ -1,12 +1,13 @@
 # Changelog
 
-## 1.8 (WIP)
+## 1.8 
 
 ### Bug fixes
 
 + All search results are shown as post meta in sidebar
++ New style for form input field for uploading files
 
-### Enhancement
+### Enhancements
 
 + Ported readme.txt to Markdown
 + Ported license.txt to Markdown and moved license text from readme.md to this file
@@ -19,6 +20,11 @@
 + Set input field width to 100% in navigation custom sidebar
 + Removed background color and border from images
 + Code cleaning (removed closing php tags from all template files)
++ Better sidebar handling
++ Nested list with multiple lines
++ Order posts the way you want to
++ Sticky post support
++ Better semantic HTML5 structure
 
 ## 1.7
 
@@ -32,7 +38,7 @@
 + Footer search form widget optimized
 + Some HTML semantic issues
 
-### Enhancement
+### Enhancements
 
 + Removed headline indent and underline h2 for better readability 
 + Ordered news and category excerpt by last modified
