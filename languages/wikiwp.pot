@@ -1,14 +1,16 @@
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator:"
+"Last-Translator: \n"
 "Language-Team: \n"
-"MIME-Version: 1.0\n"
-"X-Generator: Poedit 1.5.7\n"
+"Language: \n"
+"MIME-Version: 1.1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Located in comments
 msgid "% responses"
@@ -86,12 +88,20 @@ msgstr ""
 msgid "Page not found"
 msgstr ""
 
+#. located in home
+msgid "Pages"
+msgstr ""
+
 #. Located in post meta for wiki posts or pages
 msgid "Published"
 msgstr ""
 
 #. Located in post excerpt
 msgid "read more"
+msgstr ""
+
+#. Located in post excerpt
+msgid "Read more"
 msgstr ""
 
 #. Located in post meta for wiki posts or pages and post info beneath single posts
@@ -116,10 +126,6 @@ msgstr ""
 
 #. Located in post and page pagination
 msgid "Sections"
-msgstr ""
-
-#. Located in dashboard > Appearance > Customize for choosing your own logo file
-msgid "Set your own logo"
 msgstr ""
 
 #. Located in single posts over comments form if no comments where left so far
