@@ -136,13 +136,17 @@
         padding: 0 0 15px 0;
     }
     
-    .primary-menu-side .menu-main-menu-container { border-bottom: 1px solid #555; }
-    
-    .primary-menu-side .nav-menu-button {
+    .primary-menu-side .menu-main-menu-container {
+        border-bottom: 1px solid #555;
+    }
+
+
+    /* mobile menu button */
+    .navMenuButton {
         cursor: pointer;
         display: block;
         position: fixed;
-        z-index: 10000;
+        z-index: 100000;
         top: 0;
         left: 0;
         margin-top: 15px;
@@ -151,37 +155,59 @@
         width: 32px;
         text-indent: -99999px;
         background-color: transparent;
-        background-image: url('../images/sprite.png');
-        background-repeat: no-repeat;
-        background-size: auto 200%;
-        background-position: 0 0;
-        -webkit-transition: border 0.3s, background-color 0.3s;
-        -moz-transition: border 0.3s, background-color 0.3s;
-        -ms-transition: border 0.3s, background-color 0.3s;
-        -o-transition: border 0.3s, background-color 0.3s;
-        transition: border 0.3s, background-color 0.3s;
+    }
+
+    @media only screen and (min-width:1200px) {
+        .navMenuButton {
+            display: none;
+        }
+    }
+
+    .navMenuButton:hover {
+        cursor: pointer;
     }
     
-    .admin-bar .primary-menu-side .nav-menu-button { top: 46px; }
-    
-    .primary-menu-side .nav-menu-button:hover {
-        background-color: #F0F0F0;
-        -webkit-transition: border 0.3s, background-color 0.3s;
-        -moz-transition: border 0.3s, background-color 0.3s;
-        -ms-transition: border 0.3s, background-color 0.3s;
-        -o-transition: border 0.3s, background-color 0.3s;
-        transition: border 0.3s, background-color 0.3s;
+    .admin-bar .navMenuButton {
+        top: 46px;
+    }
+
+    @media only screen and (min-width:783px) {
+        .admin-bar .navMenuButton {
+            top: 30px;
+        }
     }
     
-    .primary-menu-side .nav-menu-button-active {
+    .navMenuButtonActive {
         left: 185px;
-        background-image: url('../images/sprite.png');
-        background-repeat: no-repeat;
-        background-position: -32px 0;
     }
-    
+
+    @media only screen and (min-width:768px) {
+        .navMenuButtonActive {
+            left: 215px;
+        }
+    }
+
+    .navMenuButtonContent {
+        display: block;
+        position: absolute;
+        top: 0;
+        padding: 8px 6px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .navMenuButtonContent hr {
+        border-top: 2px solid #aaaaaa;
+        margin: 0 0 5px 0;
+    }
+
+    .navMenuButtonContent hr:last-child {
+        margin: 0;
+    }
+
+
     /* navigation sidebar */
-    .primary-menu-side .custom-sidebar-navigation {
+    .custom-sidebar-navigation {
         margin: 0;
         padding: 15px;
     }
@@ -225,8 +251,6 @@
     .primary-menu-side .primary-menu-container {
         width: 260px;
     }
-    
-    .primary-menu-side .nav-menu-button-active { left: 215px; }
     
     .nav-container {
         padding-top: 30px;
@@ -286,11 +310,6 @@
     .primary-menu-side .sub-menu .sub-menu .current-cat a { background: #dddddd; }
 
     
-    
-    
-    
-    
-    
     /* Content */
     .container-menu-side-open {
         margin-left: 215px;
@@ -322,8 +341,6 @@
     .admin-bar nav { margin-top: 32px; }
     
     .nav-container { color: #4D4D4D; }
-    
-    .admin-bar .primary-menu-side .nav-menu-button { top: 30px; }
 }
 
 

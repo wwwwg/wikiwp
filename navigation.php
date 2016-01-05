@@ -1,3 +1,12 @@
+<div class="navMenuButton">
+    <header class="navMenuButtonTitle"><?php echo __('Menu', 'wikiwp'); ?></header>
+    <div class="navMenuButtonContent">
+        <hr>
+        <hr>
+        <hr>
+    </div>
+</div>
+
 <div class="primary-menu primary-menu-side">
     <div class="primary-menu-container">
         <nav class="nav-container">
@@ -31,8 +40,6 @@
             ?>
 
         </nav>
-
-        <div class="nav-menu-button">Navigation</div>
 
         <div class="dynamic-sidebar dynamic-sidebar-navigation">
             <div class="row sidebarContent">

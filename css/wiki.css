@@ -155,35 +155,6 @@
     /* Sidebar */
     aside input:focus { border-right: none; }
 
-    .aside-menu-button {
-        margin-top: 15px;
-        margin-right: 30px;
-        background-image: url('../images/sprite.png');
-        background-repeat: no-repeat;
-        background-size: auto 200%;
-        background-position: -64px 0;
-        -webkit-transition: border 0.3s, background-color 0.3s;
-        -moz-transition: border 0.3s, background-color 0.3s;
-        -o-transition: border 0.3s, background-color 0.3s;
-        transition: border 0.3s, background-color 0.3s;
-    }
-
-    .aside-menu-button:hover {
-        background-color: #F0F0F0;
-        -webkit-transition: border 0.3s, background-color 0.3s;
-        -moz-transition: border 0.3s, background-color 0.3s;
-        -o-transition: border 0.3s, background-color 0.3s;
-        transition: border 0.3s, background-color 0.3s;
-    }
-
-    .aside-menu-button-active {
-        right: 238px;
-        background-image: url('../images/sprite.png');
-        background-repeat: no-repeat;
-        background-position: -32px 0;
-        background-color: #333333;
-    }
-
     aside .widget,
     aside .menu ul { border-bottom: 1px solid #555555; }
 

@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
         menu = $('.primary-menu'),
         menu_side = $('.primary-menu-side'),
         menu_side_link = $('.primary-menu-side ul li a'),
-        menu_side_button = $('.primary-menu-side .nav-menu-button'),
+        menu_side_button = $('.navMenuButton'),
         // sidebar
         aside = $('aside'),
         aside_button = $('.aside-menu-button'),
@@ -20,7 +20,7 @@ jQuery(document).ready(function ($) {
         header.removeClass('container-aside-open');
         header.toggleClass('primary-menu-side-open');
         // menu
-        $(this).toggleClass('nav-menu-button-active');
+        $(this).toggleClass('navMenuButtonActive');
         menu.toggleClass('primary-menu-side-open');
         menu_side.toggleClass('main-menu-active');
         // sidebar
@@ -37,7 +37,7 @@ jQuery(document).ready(function ($) {
         header.toggleClass('container-aside-open');
         // menu
         menu.removeClass('primary-menu-side-open');
-        menu_side_button.removeClass('nav-menu-button-active');
+        menu_side_button.removeClass('navMenuButtonActive');
         // sidebar
         $(this).toggleClass('aside-menu-button-active');
         aside.toggleClass('aside-open');
