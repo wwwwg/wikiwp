@@ -780,12 +780,6 @@ Text Domain: wikiwp
     
     
     /* Sidebar */
-    
-    .aside-menu-button-active {
-        right: 330px;
-        background-color: transparent;
-    }
-    
     aside .search-form label { width: 185px; }
     
     .postmeta { margin-left: 0; }
@@ -796,10 +790,6 @@ Text Domain: wikiwp
     .headerMain { width: 100%; }
     
     .admin-bar .headerMain { top: 32px; }
-    
-
-    /* Sidebar */
-    .admin-bar .aside-menu-button { top: 30px; }
 }
 
 
@@ -978,70 +968,92 @@ aside {
     }
 }
 
-.admin-bar .aside-menu-button { top: 46px; }
-
-
 .aside-open {
     right: -15px;
     height: 100%;
 }
 
-.aside-menu-button {
+
+/* mobile sidebar button */
+.asideMenuButton {
     cursor: pointer;
     display: block;
     position: fixed;
     z-index: 11000;
     top: 0;
     right: 0;
-    margin-top: 15px;
-    margin-right: 30px;
+    margin: 15px 30px 0 0;
     height: 32px;
     width: 32px;
     text-indent: -99999px;
 }
 
-.aside-menu-button-active {
-    right: 345px;
-    background-image: url('images/sprite.png');
-    background-repeat: no-repeat;
-    background-position: -32px 0;
+@media only screen and (min-width:1200px) {
+    .asideMenuButton {
+        display: none;
+    }
 }
 
-
-
-
-
-/* mobile sidebar button */
-.aside-menu-button {
-    margin-top: 15px;
-    margin-right: 30px;
-    background-image: url('images/sprite.png');
-    background-repeat: no-repeat;
-    background-size: auto 200%;
-    background-position: 0 0;
-    -webkit-transition: border 0.3s, background-color 0.3s;
-    -moz-transition: border 0.3s, background-color 0.3s;
-    -o-transition: border 0.3s, background-color 0.3s;
-    transition: border 0.3s, background-color 0.3s;
-}
-
-.aside-menu-button:hover {
+.asideMenuButton:hover {
     cursor: pointer;
 }
 
+.admin-bar .asideMenuButton {
+    top: 46px;
+}
+
+@media only screen and (min-width:768px) {
+    .admin-bar .asideMenuButton {
+        top: 30px;
+    }
+}
+
+@media only screen and (min-width:783px) {
+    .admin-bar .asideMenuButton {
+        top: 30px;
+    }
+}
+
 .aside-menu-button-active {
+    right: 345px;
+}
+
+.asideMenuButtonActive {
     right: 238px;
-    background-image: url('images/sprite.png');
-    background-repeat: no-repeat;
-    background-position: -32px 0;
+}
+
+@media only screen and (min-width:768px) {
+    .asideMenuButtonActive {
+        right: 330px;
+        margin-right: 0;
+        background-color: transparent;
+    }
+}
+
+.asideMenuButtonContent {
+    display: block;
+    position: absolute;
+    top: 0;
+    padding: 8px 8px;
+    height: 100%;
+    width: 100%;
+}
+
+.asideMenuButtonContent hr {
+    border: none;
+    border-radius: 100%;
+    margin: 0 auto 4px auto;
+    height: 3px;
+    width: 3px;
+    background: #aaaaaa;
+}
+
+.asideMenuButtonContent hr:last-child {
+    margin: 0 auto;
 }
 
 
-
-
-
-
-
+/* sidebar content */
 .dynamic-sidebar-container { padding: 30px 0; }
 
 .primary-menu-side .widget,
@@ -1067,8 +1079,6 @@ aside .widget {
 
 
     /* IF ADMIN BAR IS SHOWN */
-    .admin-bar .aside-menu-button { top: 30px; }
-
     .aside-container { padding-top: 0; }
 
     .aside-container a { color: #2487D7; }
@@ -1100,8 +1110,6 @@ aside .widget {
         height: auto;
         width: 100%;
     }
-
-    .aside-menu-button { display: none; }
 }
 
 

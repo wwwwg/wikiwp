@@ -56,6 +56,10 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
+#. Located in main navigation (hidden by default - Text for screen readers)
+msgid "Menu"
+msgstr ""
+
 #. Located in home
 msgid "Newer Entries"
 msgstr ""
@@ -126,6 +130,10 @@ msgstr ""
 
 #. Located in post and page pagination
 msgid "Sections"
+msgstr ""
+
+#. Located in sidebar (hidden by default - Text for screen readers)
+msgid "Sidebar"
 msgstr ""
 
 #. Located in single posts over comments form if no comments where left so far

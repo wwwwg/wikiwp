@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
         menu_side_button = $('.navMenuButton'),
         // sidebar
         aside = $('aside'),
-        aside_button = $('.aside-menu-button'),
+        aside_button = $('.asideMenuButton'),
         // content
         container = $('.container-fluid');
         
@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
         menu_side.toggleClass('main-menu-active');
         // sidebar
         aside.removeClass('aside-open');
-        aside_button.removeClass('aside-menu-button-active');
+        aside_button.removeClass('asideMenuButtonActive');
         //content
         container.removeClass('container-aside-open');
         container.toggleClass('container-menu-side-open');
@@ -39,7 +39,7 @@ jQuery(document).ready(function ($) {
         menu.removeClass('primary-menu-side-open');
         menu_side_button.removeClass('navMenuButtonActive');
         // sidebar
-        $(this).toggleClass('aside-menu-button-active');
+        $(this).toggleClass('asideMenuButtonActive');
         aside.toggleClass('aside-open');
         //content
         container.removeClass('container-menu-side-open');
@@ -52,7 +52,7 @@ jQuery(document).ready(function ($) {
         // menu
         menu.toggleClass('primary-menu-side-open');
         menu_side.toggleClass('main-menu-active');
-        menu_side_button.toggleClass('nav-menu-button-active');
+        menu_side_button.toggleClass('navMenuButtonActive');
         //content
         container.toggleClass('container-menu-side-open');
 	});
@@ -69,10 +69,10 @@ jQuery(document).ready(function ($) {
         menu.removeClass('main-menu-active');
         menu.removeClass('primary-menu-side-open');
         menu_side.removeAttr('style');
-        menu_side_button.removeClass('nav-menu-button-active');
+        menu_side_button.removeClass('navMenuButtonActive');
         // sidebar
         aside.removeClass('aside-open');
-        aside_button.removeClass('aside-menu-button-active');
+        aside_button.removeClass('asideMenuButtonActive');
 		// content        
 		container.removeClass('container-menu-side-open');
         container.removeClass('container-menu-side-open');
@@ -93,10 +93,10 @@ jQuery(document).ready(function ($) {
             menu.removeClass('mobile-menu');
             menu.removeClass('main-menu-active');
             menu.removeClass('primary-menu-side-open');
-            menu_side_button.removeClass('nav-menu-button-active');
+            menu_side_button.removeClass('navMenuButtonActive');
             // sidebar
             aside.removeClass('aside-open');
-            aside_button.removeClass('aside-menu-button-active');
+            aside_button.removeClass('asideMenuButtonActive');
             // content
             container.removeClass('container-menu-side-open');
             container.removeClass('container-aside-open');

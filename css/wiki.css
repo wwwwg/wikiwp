@@ -238,24 +238,6 @@
     aside .widget,
     aside .menu ul { border-bottom: 1px solid #E5E5E5; }
 
-    .aside-menu-button {
-       background-color: white;
-        -webkit-transition: border 0.3s, background-color 0.3s;
-        -moz-transition: border 0.3s, background-color 0.3s;
-        -o-transition: border 0.3s, background-color 0.3s;
-        transition: border 0.3s, background-color 0.3s;
-    }
-
-    .aside-menu-button:hover {
-        background-color: #F0F0F0;
-        -webkit-transition: border 0.3s, background-color 0.3s;
-        -moz-transition: border 0.3s, background-color 0.3s;
-        -o-transition: border 0.3s, background-color 0.3s;
-        transition: border 0.3s, background-color 0.3s;
-    }
-
-    .aside-menu-button-active { right: 300px; }
-
     .postmeta { color: #4D4D4D; }
 
     .postmeta-section {

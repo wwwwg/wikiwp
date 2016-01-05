@@ -1,3 +1,12 @@
+<div class="asideMenuButton">
+    <header class="asideMenuButtonTitle"><?php echo __('Sidebar', 'wikiwp'); ?></header>
+    <div class="asideMenuButtonContent">
+        <hr>
+        <hr>
+        <hr>
+    </div>
+</div>
+
 <aside>
     <div class="aside-container container-full">
         <div class="customSidebar">
@@ -89,5 +98,3 @@
         </div>
     </div>
 </aside>
-
-<div class="aside-menu-button">Sidebar</div>
