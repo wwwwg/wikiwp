@@ -72,7 +72,6 @@
     .primary-menu-side .current-menu-item a,
     .primary-menu-side .current_page_item a,
     .primary-menu-side .current-cat a {
-        border-color: #2EA2CC;
         background: #444444;
     }
     
@@ -299,15 +298,15 @@
     }
 
     .primary-menu-side .nav-container a:visited {
-        color: #135995;
+        color: #2487D7;
         background: transparent;
     }
     
     .primary-menu-side .current-menu-item a,
     .primary-menu-side .current_page_item a,
     .primary-menu-side .current-cat a {
-        border-color: #2487D7;
-        background: #dddddd;
+        border-color: #E8E8E8;
+        background: #E8E8E8;
     }
     
      /* sub menu 2nd level */
