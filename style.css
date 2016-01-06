@@ -124,7 +124,7 @@ Text Domain: wikiwp
     .admin-bar .headerMain { top: 46px; }
 
     #logo {
-        margin-left: 5em;
+        margin: 0 32px;
         max-height: 152px;
     }
 
