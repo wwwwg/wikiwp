@@ -233,6 +233,7 @@
     }
     
     .navMenuButtonContent hr:nth-child(2) {
+        margin-right: 15%;
         width: 85%;
     }
 
