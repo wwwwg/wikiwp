@@ -1014,12 +1014,27 @@ aside {
     }
 }
 
-.aside-menu-button-active {
-    right: 345px;
-}
-
 .asideMenuButtonActive {
     right: 238px;
+
+}
+
+@media only screen and (max-width:786px) {
+    .asideMenuButtonActive {
+        right: 0;
+        margin: 0;
+        padding: 15px;
+        height: auto;
+        width: 315px;
+        background: #333333;
+    }
+
+    .asideMenuButtonActive .asideMenuButtonContent {
+        position: relative;
+        float: right;
+        height: 32px;
+        width: 32px;
+    }
 }
 
 @media only screen and (min-width:768px) {
@@ -1028,6 +1043,12 @@ aside {
         margin-right: 0;
         background-color: transparent;
     }
+}
+
+.asideMenuButtonTitle {
+    visibility: hidden;
+    height: 0;
+    width: 0;
 }
 
 .asideMenuButtonContent {
