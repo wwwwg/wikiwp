@@ -126,6 +126,11 @@ Text Domain: wikiwp
     #logo {
         margin: 0 32px;
         max-height: 152px;
+        text-align: center;
+    }
+
+    #site-logo {
+        display: inline-block;
     }
 
     .logo-img { 
