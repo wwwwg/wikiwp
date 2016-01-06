@@ -181,10 +181,33 @@
         left: 185px;
     }
 
+    @media only screen and (max-width:786px) {
+        .navMenuButtonActive {
+            left: 0;
+            margin: 0;
+            padding: 15px 10px;
+            height: auto;
+            width: 262px;
+            background: #333333;
+        }
+
+        .navMenuButtonActive .navMenuButtonContent {
+            position: relative;
+            height: 32px;
+            width: 32px;
+        }
+    }
+
     @media only screen and (min-width:768px) {
         .navMenuButtonActive {
             left: 215px;
         }
+    }
+
+    .navMenuButtonTitle {
+        visibility: hidden;
+        height: 0;
+        width: 0;
     }
 
     .navMenuButtonContent {

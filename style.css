@@ -1023,7 +1023,7 @@ aside {
     .asideMenuButtonActive {
         right: 0;
         margin: 0;
-        padding: 15px;
+        padding: 15px 10px;
         height: auto;
         width: 315px;
         background: #333333;
