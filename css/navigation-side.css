@@ -230,6 +230,10 @@
     .navMenuButtonContent hr:last-child {
         margin: 0;
     }
+    
+    .navMenuButtonContent hr:nth-child(2) {
+        width: 85%;
+    }
 
 
     /* navigation sidebar */
