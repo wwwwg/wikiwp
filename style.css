@@ -1019,7 +1019,7 @@ aside {
 
 }
 
-@media only screen and (max-width:786px) {
+@media only screen and (max-width:767px) {
     .asideMenuButtonActive {
         right: 0;
         margin: 0;
@@ -1034,6 +1034,10 @@ aside {
         float: right;
         height: 32px;
         width: 32px;
+    }
+
+    .asideMenuButtonActive .asideMenuButtonContent hr {
+        background: white;
     }
 }
 
