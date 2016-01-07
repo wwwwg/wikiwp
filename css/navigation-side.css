@@ -13,6 +13,18 @@
         line-height: 2em;
         background: #333333;
     }
+
+    @media only screen and (min-width:783px) {
+        .primary-menu-side {
+            width: 230px;
+        }
+    }
+
+    @media only screen and (min-width:1200px) {
+        .primary-menu-side {
+            line-height: inherit;
+        }
+    }
     
     .primary-menu-side .primary-menu-container {
         overflow-y: scroll;
@@ -26,8 +38,16 @@
     .nav-container {
         margin-bottom: 60px;
         padding-top: 60px;
-        width: 100%;
+        width: 262px;
         color: #aaaaaa;
+    }
+
+    @media only screen and (min-width:768px) {
+        .nav-container {
+            padding-top: 15px;
+            padding-right: 0;
+            width:100%;
+        }
     }
     
     .admin-bar .nav-container { margin-top: 46px; }
@@ -58,8 +78,14 @@
     .primary-menu-side .nav-container a {
         display: block;
         border-left: 5px solid transparent;
-        padding: 5px 15px 5px 10px;
+        padding: 10px 15px 10px 10px;
         color: white;
+    }
+
+    @media only screen and (min-width:768px) {
+        .primary-menu-side .nav-container a {
+            padding: 5px 15px 5px 10px;
+        }
     }
     
     .primary-menu-side .nav-container a:hover {
@@ -284,11 +310,6 @@
         width: 260px;
     }
     
-    .nav-container {
-        padding-top: 30px;
-        padding-right: 0;
-    }
-    
     .primary-menu-side .nav-dynamic-sidebar {
         color: #4D4D4D;
     }
@@ -364,15 +385,13 @@
 
 
 @media only screen and (min-width:783px) {
-
-    /* Navigation */
-    .primary-menu-side {
-        width: 230px;
-        line-height: inherit; }
+    .admin-bar nav {
+        margin-top: 32px;
+    }
     
-    .admin-bar nav { margin-top: 32px; }
-    
-    .nav-container { color: #4D4D4D; }
+    .nav-container {
+        color: #4D4D4D;
+    }
 }
 
 
