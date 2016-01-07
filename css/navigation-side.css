@@ -50,8 +50,6 @@
         }
     }
     
-    .admin-bar .nav-container { margin-top: 46px; }
-    
     .primary-menu-side-open {
         z-index: 10000;
         left: 0;
@@ -61,7 +59,7 @@
     .primary-menu-side .menu-title { 
         display: block;
         margin-left: 15px;
-        padding-bottom: 10px;
+        line-height: 2rem;
     }
     
     .primary-menu-side ul { 
@@ -152,7 +150,6 @@
     .primary-menu-side ul.default-nav .categories {
         display: block;
         margin: 0;
-        padding: 15px 0 0 0;
         list-style: none;
     }
     
