@@ -1,7 +1,5 @@
 <?php
 	// DISPLAY COMMENTS IF COMMENTS ARE OPENED
-    while ( have_posts() ) : the_post();
-
     if ( comments_open() ) {
 		echo '<div class="comments">',
 			 '<h2>';
@@ -33,5 +31,3 @@
 		comment_form();
 		echo '</div>'; // end of .content
 	}
-
-    endwhile;
