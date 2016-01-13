@@ -1,6 +1,21 @@
 # Changelog
 
-## 1.8 
+## 1.8.2
+
+### Bug fixes
+
++ Removed unused text domain *label* from search form localization
++ Fixed problem with wrong assigned post comments
+
+## 1.8.1
+
+### Bug fixes
+
++ Fixed localization files + add Protuguese Brasil (pt_BR) language file - thanks to Mauro Mascarenhas
++ Fixed link style in custom navigation sidebar
++ Fixed mobile menu and sidebar button overflow hidden on Safari (Mac OSX & iOS)
+
+## 1.8
 
 ### Bug fixes
 
