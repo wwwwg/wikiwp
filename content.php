@@ -1,7 +1,10 @@
 <article class="entry entryTypePost">
     <header class="entryHeader">
         <h1 class="entryTitle">
-            <?php the_title(); ?>
+            <?php
+            while ( have_posts() ) : the_post();
+            the_title();
+            ?>
         </h1>
     </header>
 
@@ -9,6 +12,7 @@
         <?php
         // get the content
         the_content();
+        endwhile;
         ?>
     </div>
 

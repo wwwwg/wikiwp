@@ -25,7 +25,7 @@
                 edit_post_link(__('edit', 'wikiwp'));
                 echo '</span>',
                      '</div>'; // end of .postinfo-author
-            }    
+            }
         }
 
 	// SINGLE
@@ -61,15 +61,16 @@
 			 '<div class="postinfo postinfo-tags">',
 			 '<span>'.__('Tags', 'wikiwp').':&nbsp;';
 		$tag = get_the_tags();
-		if (! $tag) { 
+		if (! $tag) {
 			echo 'No tags for this post';
 		} else {
 			the_tags('',', ','');
 		}
 		echo '</span>',
 			 '</div>'; // end of .postinfo-tags
+
 		// get 5 related posts
-        wikiwp_get_related_posts($post);
+        //wikiwp_get_related_posts($post);
 
 		
 		// post navigation
