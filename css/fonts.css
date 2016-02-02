@@ -52,6 +52,14 @@ p {
     line-height: 1.5em;
 }
 
+.small {
+    font-size: small;
+}
+
+.smaller {
+    font-size: smaller;
+}
+
 
 /* links */
 a:focus,

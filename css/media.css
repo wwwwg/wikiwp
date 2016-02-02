@@ -29,6 +29,10 @@ figure {
     padding-top: 15px;
 }
 
-.wikiwp-attachment-size a {
+.wikiwp-attachment-size .wikiwp-entry-title {
+    margin: 0 0 15px 0;
+}
+
+.wikiwp-attachment-size .wikiwp-attachment-full-size-link {
     margin-left: 15px;
 }
