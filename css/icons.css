@@ -1,0 +1,44 @@
+.wikiwp-calendar-icon {
+    display: block;
+    float: left;
+    margin: 2px 5px 0 0;
+}
+
+.wikiwp-calendar-icon .calendar-header {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    height: 4px;
+    width: 16px;
+    background: #4D4D4D;
+}
+
+.wikiwp-calendar-icon .calendar-header:before {
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    display: block;
+    content: '';
+    height: 3px;
+    width: 3px;
+    background: #4D4D4D;
+}
+
+.wikiwp-calendar-icon .calendar-header:after {
+    position: absolute;
+    top: -2px;
+    right: 2px;
+    display: block;
+    content: '';
+    height: 3px;
+    width: 3px;
+    background: #4D4D4D;
+}
+
+.wikiwp-calendar-icon .calendar-content {
+    box-sizing: border-box;
+    display: block;
+    height: 10px;
+    width: 16px;
+    border: 1px solid #4D4D4D;
+}

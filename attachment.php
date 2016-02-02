@@ -50,6 +50,23 @@ get_template_part('navigation');
                     </header>
 
                     <div class="wikiwp-entry-content">
+                        <p class="">
+                            <?php
+                            // publishing date
+                            wikiwp_icon_date($post);
+                            the_date();
+                            ?>
+                        </p>
+
+                        <p class="">
+                            <?php
+                            _e('Uploaded from', 'wikiwp');
+                            echo ':</strong>&nbsp;';
+                            the_author_posts_link();
+                            echo '</span>';
+                            ?>
+                        </p>
+
                         <p>
                             Image size: <?php echo $att_image[1];?> x <?php echo $att_image[2];?> px <a href="<?php echo wp_get_attachment_url($post->id); ?>" class="wikiwp-attachment-full-size-link" title="Get full size of image <?php the_title(); ?>" rel="attachment">&raquo; get full size</a>
                         </p>

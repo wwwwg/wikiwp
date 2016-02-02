@@ -507,3 +507,20 @@
 
         <?php
     }
+
+
+    /**
+     * ICONS
+     * functions for displaying icons created only with html and css
+     */
+function wikiwp_icon_date($post) {
+
+    ?>
+
+    <span class="wikiwp-calendar-icon">
+        <span class="calendar-header"></span>
+        <span class="calendar-content"></span>
+    </span>
+
+    <?php
+}
