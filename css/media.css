@@ -15,3 +15,20 @@ figure {
 .thumbnailLink {
     display: block;
 }
+
+
+/*
+* ATTACHMENT PAGE
+* styles for template attachment.php
+*/
+.wikiwp-attachment {
+    margin: 0;
+}
+
+.wikiwp-attachment .wp-caption-text {
+    padding-top: 15px;
+}
+
+.wikiwp-attachment-size a {
+    margin-left: 15px;
+}

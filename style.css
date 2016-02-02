@@ -1201,20 +1201,9 @@ aside .widget {
 */
 .entryTypePostExcerpt.sticky,
 .entryTypePostExcerpt.category-sticky {
-    margin-bottom: 5px;
+    margin: 5px;
     padding: 30px;
     background-color: #F9F9F9;
-}
-
-.entryTypePostExcerpt.sticky,
-.entryTypePostExcerpt.category-sticky {
-    margin: 5px;
-    padding: 25px;
-    background-color: #F9F9F9;
-}
-
-.entryTypePostExcerptContainer .entry {
-
 }
 
 .entryTypePostExcerptContainer .sticky:last-child {
@@ -1224,6 +1213,20 @@ aside .widget {
 .entryTypePostExcerpt.sticky .entryTitle,
 .entryTypePostExcerpt.category-sticky .entryTitle{
     border-color: #ccc;
+}
+
+
+/*
+ * section highlighting
+*/
+.entry-highlighted {
+    margin: 5px 0;
+    padding: 25px;
+    background-color: #F9F9F9;
+}
+
+.entry-highlighted:last-child {
+    margin-bottom: 0;
 }
 
 
