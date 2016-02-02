@@ -1,6 +1,6 @@
 <?php
 	// DISPLAY COMMENTS IF COMMENTS ARE OPENED
-	if ( comments_open() ) {
+    if ( comments_open() ) {
 		echo '<div class="comments">',
 			 '<h2>';
 		_e('Comments', 'wikiwp');
@@ -23,11 +23,11 @@
 			next_comments_link();
 			echo '</div>',
 				 '</div>';
-		} else { 
-			// this is displayed if there are no comments so far	
+		} else {
+			// this is displayed if there are no comments so far
 			_e('So empty here ... leave a comment!', 'wikiwp');
 		}
 		// load comment form
-		comment_form(); 
+		comment_form();
 		echo '</div>'; // end of .content
 	}

@@ -1,9 +1,6 @@
 <?php
 get_header();
 get_template_part('navigation');
-
-// post
-while ( have_posts() ) : the_post();
 ?>
 
 <div class="postContainer">
@@ -11,10 +8,8 @@ while ( have_posts() ) : the_post();
 	// get content format
 	get_template_part( 'content', get_post_format() );
 
-
 	// comments
-	comments_template();
-	endwhile;
+	comments_template( '', true );
 	?>
 
 	<div class="last-posts-list postinfo clearfix">

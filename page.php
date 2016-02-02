@@ -3,7 +3,6 @@ get_header();
 get_template_part('navigation');
 
 // post
-while ( have_posts() ) : the_post();
 ?>
 
 <div class="pageContainer">
@@ -13,7 +12,6 @@ while ( have_posts() ) : the_post();
 
 	// comments
 	comments_template();
-	endwhile;
 	?>
 </div>
 
