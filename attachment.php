@@ -15,7 +15,7 @@ get_template_part('navigation');
             </header>
 
             <div class="entry-attachment">
-                <?php if ( wp_attachment_is_image( $post->id ) ) : $att_image = wp_get_attachment_image_src( $post->id, "full-hd"); ?>
+                <?php if ( wp_attachment_is_image( $post->id ) ) : $att_image = wp_get_attachment_image_src( $post->id, "fhd"); ?>
                     <p class="wikiwp-attachment">
                         <a href="<?php echo wp_get_attachment_url($post->id); ?>" title="<?php the_title(); ?>" rel="attachment">
                             <img src="<?php echo $att_image[0];?>"  class="attachment-fhd" alt="<?php the_title(); ?>" />

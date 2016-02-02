@@ -34,6 +34,7 @@
 			add_image_size( 'thumbnail-croped', 150, 150, true ); // 150px x 150px croped
 			add_image_size( 'medium-croped', 300, 300, true ); // 150px x 150px croped
 			add_image_size( 'medium-fix-width', 300, 9999, false ); // 300px wide and unlimited height
+            add_image_size( 'fhd', 1920, 9999, false ); // full hd size
 		}
         
         // Remove accents on media upload
