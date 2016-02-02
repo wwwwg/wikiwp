@@ -31,6 +31,7 @@
                     <div class="widget">
                         <?php
                         // modified date
+                        wikiwp_icon_date($post);
                         _e('Last update on', 'wikiwp');
                         echo '&nbsp;';
                         the_modified_date();
