@@ -33,23 +33,37 @@ get_template_part('navigation');
             <footer class="wikiwp-attachment-info clearfix">
                 <hr>
 
-                <p class="wikiwp-attachment-size">
-                    Image size: <?php echo $att_image[1];?> x <?php echo $att_image[2];?> px <a href="<?php echo wp_get_attachment_url($post->id); ?>" title="Get full size of image <?php the_title(); ?>" rel="attachment">&raquo; get full size</a>
-                </p>
+                <div class="wikiwp-entry wikiwp-attachment-description">
+                    <div class="wikiwp-entry-content">
+                        <p>
+                            <?php echo get_post(get_post_thumbnail_id())->post_content; ?>
+                        </p>
+                    </div>
+                </div>
 
-                <p class="resolutions entry-highlighted"> Downloads:
-                    <?php
-                    $images = array();
-                    $image_sizes = get_intermediate_image_sizes();
-                    array_unshift( $image_sizes, 'full' );
-                    foreach( $image_sizes as $image_size ) {
-                        $image = wp_get_attachment_image_src( get_the_ID(), $image_size );
-                        $name = $image_size . ' (' . $image[1] . 'x' . $image[2] . ')';
-                        $images[] = '<a href="' . $image[0] . '">' . $name . '</a>';
-                    }
-                    echo implode( ' | ', $images );
-                    ?>
-                </p>
+                <div class="wikiwp-entry wikiwp-attachment-size entry-highlighted">
+                    <div class="wikiwp-entry-content">
+                        <p>
+                            Image size: <?php echo $att_image[1];?> x <?php echo $att_image[2];?> px <a href="<?php echo wp_get_attachment_url($post->id); ?>" title="Get full size of image <?php the_title(); ?>" rel="attachment">&raquo; get full size</a>
+                        </p>
+
+                        <hr>
+
+                        <p class="resolutions"> Downloads:
+                            <?php
+                            $images = array();
+                            $image_sizes = get_intermediate_image_sizes();
+                            array_unshift( $image_sizes, 'full' );
+                            foreach( $image_sizes as $image_size ) {
+                                $image = wp_get_attachment_image_src( get_the_ID(), $image_size );
+                                $name = $image_size . ' (' . $image[1] . 'x' . $image[2] . ')';
+                                $images[] = '<a href="' . $image[0] . '">' . $name . '</a>';
+                            }
+                            echo implode( ' | ', $images );
+                            ?>
+                        </p>
+                    </div>
+                </div>
             </footer>
 
         <?php

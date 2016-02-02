@@ -1225,7 +1225,11 @@ aside .widget {
     background-color: #F9F9F9;
 }
 
-.entry-highlighted:last-child {
+.entry-highlighted .wikiwp-entry-content p:first-child {
+    margin-top: 0;
+}
+
+.entry-highlighted .wikiwp-entry-content p:last-child {
     margin-bottom: 0;
 }
 
