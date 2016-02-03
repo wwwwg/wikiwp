@@ -60,15 +60,20 @@ get_template_part('navigation');
 
                         <p class="">
                             <?php
+                            wikiwp_icon_profile($post);
                             _e('Uploaded from', 'wikiwp');
-                            echo ':</strong>&nbsp;';
+                            echo ':&nbsp;';
                             the_author_posts_link();
                             echo '</span>';
                             ?>
                         </p>
 
                         <p>
-                            Image size: <?php echo $att_image[1];?> x <?php echo $att_image[2];?> px <a href="<?php echo wp_get_attachment_url($post->id); ?>" class="wikiwp-attachment-full-size-link" title="Get full size of image <?php the_title(); ?>" rel="attachment">&raquo; get full size</a>
+                            <?php
+                            wikiwp_icon_image($post);
+                            _e('Image size', 'wikiwp');
+                            echo ':&nbsp;' .$att_image[1];
+                            ?> x <?php echo $att_image[2];?> px <a href="<?php echo wp_get_attachment_url($post->id); ?>" class="wikiwp-attachment-full-size-link" title="Get full size of image <?php the_title(); ?>" rel="attachment">&raquo; get full size</a>
                         </p>
                     </div>
 
@@ -77,8 +82,10 @@ get_template_part('navigation');
 
             <div class="wikiwp-entry wikiwp-attachment-size entry-highlighted smaller">
                 <div class="wikiwp-entry-content">
-                    <p class="resolutions"> Downloads:
+                    <p class="resolutions">
                         <?php
+                        _e('Additional image sizes', 'wikiwp');
+                        echo ':&nbsp;';
                         $images = array();
                         $image_sizes = get_intermediate_image_sizes();
                         array_unshift( $image_sizes, 'full' );

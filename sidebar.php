@@ -29,44 +29,54 @@
                     </div>
 
                     <div class="widget">
-                        <?php
-                        // modified date
-                        wikiwp_icon_date($post);
-                        _e('Last update on', 'wikiwp');
-                        echo '&nbsp;';
-                        the_modified_date();
-                        ?>
+                       <p>
+                           <?php
+                           // modified date
+                           wikiwp_icon_date($post);
+                           _e('Last update on', 'wikiwp');
+                           echo '&nbsp;';
+                           the_modified_date();
+                           ?>
+                       </p>
                     </div>
 
                     <div class="widget">
-                        <div class="">
+                        <p>
                             <?php
                             // publishing date
+                            wikiwp_icon_date($post);
                             _e('Published', 'wikiwp');
                             echo '&nbsp;';
                             the_date();
                             ?>
-                        </div>
+                        </p>
 
-                        <div class="">
+                        <p>
                             <?php
+                            wikiwp_icon_profile($post);
                             _e('Author', 'wikiwp');
                             echo ':</strong>&nbsp;';
                             the_author_posts_link();
                             echo '</span>';
                             ?>
-                        </div>
+                        </p>
 
-                        <div class="">
+                        <p>
                             <?php
                             // categories
+                            wikiwp_icon_cat($post);
                             _e('Categories', 'wikiwp');
                             echo ':&nbsp;';
                             the_category(', ');
                             ?>
-                        </div>
+                        </p>
 
-                        <?php wikiwp_get_tags($post); ?>
+                        <p>
+                            <?php
+                            wikiwp_icon_tag($post);
+                            wikiwp_get_tags($post);
+                            ?>
+                        </p>
                     </div>
 
                     <?php wikiwp_get_related_posts($post); ?>

@@ -513,14 +513,60 @@
      * ICONS
      * functions for displaying icons created only with html and css
      */
-function wikiwp_icon_date($post) {
 
-    ?>
+    // calendar icon
+    function wikiwp_icon_date($post) {
+        ?>
 
-    <span class="wikiwp-calendar-icon">
-        <span class="calendar-header"></span>
-        <span class="calendar-content"></span>
-    </span>
+        <span class="wikiwp-calendar-icon">
+            <span class="calendar-header"></span>
+            <span class="calendar-content"></span>
+        </span>
 
-    <?php
-}
+        <?php
+    }
+
+    // category icon
+    function wikiwp_icon_cat($post) {
+        ?>
+
+        <span class="wikiwp-cat-icon"></span>
+
+        <?php
+    }
+
+    // image icon
+    function wikiwp_icon_image($post) {
+        ?>
+
+        <span class="wikiwp-image-icon">
+            <span class="image-sun"></span>
+            <span class="image-mountain-1"></span>
+            <span class="image-mountain-2"></span>
+        </span>
+
+        <?php
+    }
+
+    // profile icon
+    function wikiwp_icon_profile($post) {
+        ?>
+
+        <span class="wikiwp-profile-icon">
+            <span class="profile-head"></span>
+            <span class="profile-body"></span>
+        </span>
+
+        <?php
+    }
+
+    // tag icon
+    function wikiwp_icon_tag($post) {
+        ?>
+
+        <span class="wikiwp-tag-icon">
+            <span class="tag-circle"></span>
+        </span>
+
+        <?php
+    }
