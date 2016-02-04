@@ -81,7 +81,7 @@ get_template_part('navigation');
             </div>
 
             <div class="wikiwp-entry wikiwp-attachment-size entry-highlighted smaller">
-                <div class="wikiwp-entry-content">
+                <div class="wikiwp-entry-content col-md-12">
                     <p class="resolutions">
                         <?php
                         _e('Additional image sizes', 'wikiwp');

@@ -309,24 +309,8 @@ Text Domain: wikiwp
 
 
     /* Postinfo */
-    .postinfo {
-        display: block;
-        clear: both;
-        margin-top: 1px;
-        padding: 5px;
-        overflow: hidden;
-        font-size: smaller;
-    }
-
-    .postinfo-excerpt {
-        clear: inherit;
-        padding: 5px 0 0 0;
-    }
-
-    .postinfo h4 {
-        margin: 0 0 0.5em 0;
-        font-weight: bold;
-        color: #4D4D4D;
+    .wikiwp-post-info .widget:first-child h3 {
+        margin-top: 0;
     }
 
     .pagination {
@@ -1192,6 +1176,27 @@ aside .widget {
 
 .entryTypePostExcerpt .entryContent p:last-child {
     margin-bottom: 0;
+}
+
+
+.entry-type-post footer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.entry-type-post .row {
+    margin-right: -25px;
+    margin-left: -25px;
+}
+
+.entry-type-post .row .col {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.entry-type-post .row .col.entry-highlighted {
+    padding-right: 25px;
+    padding-left: 25px;
 }
 
 
